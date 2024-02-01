@@ -4,6 +4,7 @@
 '''
 # This is a single comment line. 
 
+
 # Pseudo code is written language that has some some code-like structure but is not perfect syntax
 # Example:   
 '''
@@ -16,10 +17,14 @@
 '''
 
 #Declaring and Initializing variables
+#variable names can't start with a number, can't have spaces, can't have special characters.
+#variable names should be descriptive and meaningful
+
 
 #strings
 students_name = "Alice"  # This is a variable of type string, since it contains only characters
 students_ID = "784564"   # This is also a string.  The nunbers in the string are just symbols. Can't do math!!
+_num = 5
 
 #integers
 num_of_students = 40
@@ -63,6 +68,46 @@ year_born = int(input("What year were you born? "))
 percentage = float(input("What is the percentage, in decimal, of students who will stop programming after this course? "))
 
 print(percentage * 100, "%")
+
+my_num = 50
+my_name = "Alice"
+
+print(f"Hello {my_name}, you are {my_num} years old")
+
+print("Hello {}, you are {} years old".format(my_name, my_num))
+
+# print decimal value with two places after the decimal
+print("Hello {}, you are {:.2f} years old".format(my_name, my_num)) # notice the .2f
+print(f"Hello {my_name}, you are {my_num:.2f} years old") # notice the .2f
+
+# newline operator
+print("Hello, this is the first line\nThis is the second line")
+
+# tab operator
+print("Hello, this is the first line$\tThis is the second line")
+
+# escape character
+print("Hello, this is the first line\"This is the second line")
+
+# escaping backslah character
+print("Hello, this is the first line\\This is the second line")
+
+# Example:
+print("C:\\Users\\Alice\\Documents\\Python\\Module02_Lecture_Code.py")
+print(r"Users/burres/Python-Lectures/Python-Lecture-Code/Module02_Lecture_Code.py") 
+# r means raw string, so it will print as is
+
+# % operator
+# %s - string
+# %d - integer
+# %f - float
+# %x - hexadecimal
+print("Hello %s, you are %d years old" % (my_name, my_num))
+print("Hello %s, you are %f years old" % (my_name, my_num))
+print("Hello %s, you are %x years old" % (my_name, my_num))
+
+
+
 
 
                          
