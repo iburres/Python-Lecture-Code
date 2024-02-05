@@ -1,0 +1,55 @@
+'''
+    Module 03 Lecture Code: Decision Structures
+'''
+
+# Python decision structures
+# if, if-else, if-elif-else.  Boolean expressions.  Logical operators.  Nested if statements.
+
+# if statement
+# if <condition>:    The header must evaluate to True or False
+#     <statement>    Notice the indentation
+
+
+user_choice = input("Do you want to continue? (yes/no): ")
+
+if (user_choice.lower() == "yes"):
+    print("You chose to continue.")
+  
+
+# if-else statement
+if user_choice == "no":
+    print("You chose to stop.")
+else:
+    print("You chose to continue.")
+
+# if-elif-else statement  
+rand_num = int(input("Enter a number: "))
+
+if rand_num > 5:
+    print("The number is greater than 5.")
+elif rand_num < 5:
+    print("The number is less than 5.")
+elif rand_num == 4:
+    print("The number is 4.")
+else:
+    print("The number is 5.")
+
+#nested if statements 
+if rand_num > 5 and rand_num < 10:
+    print("The number is between 5 and 10.")
+else:
+    print("The number is less than 5.")
+        
+# logical operators
+# and, or, not
+# >, <, >=, <=, ==, !=
+# truth tables
+# T and T = T   I am 5.9 feet tall and I am 45 years old
+# T and F = F   I am 5.9 feet tall and I am 4 years old
+# F and T = F   I am 4 feet tall and I am 45 years old
+# F and F = F   I am 4 feet tall and I am 4 years old
+# T or T = T    I am 5.9 feet tall or I am 45 years old
+# T or F = T    I am 5.9 feet tall or I am 4 years old
+# F or T = T    I am 4 feet tall or I am 45 years old
+# F or F = F    I am 4 feet tall or I am 4 years old
+
