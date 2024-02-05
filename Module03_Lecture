@@ -12,14 +12,15 @@
 
 user_choice = input("Do you want to continue? (yes/no): ")
 
-if (user_choice.lower() == "yes"):
+#.lower() converts the string to lowercase.  .upper() converts the string to uppercase
+if (user_choice.lower() == "yes"): 
     print("You chose to continue.")
   
 
 # if-else statement
 if user_choice == "no":
     print("You chose to stop.")
-else:
+else: # else is optional
     print("You chose to continue.")
 
 # if-elif-else statement  
@@ -35,8 +36,12 @@ else:
     print("The number is 5.")
 
 #nested if statements 
-if rand_num > 5 and rand_num < 10:
+if rand_num > 5:
     print("The number is between 5 and 10.")
+    if rand_num > 7:
+        print("The number is greater than 7.")  
+        if rand_num == 8:
+            print("The number is 8.")
 else:
     print("The number is less than 5.")
         
@@ -53,3 +58,12 @@ else:
 # F or T = T    I am 4 feet tall or I am 45 years old
 # F or F = F    I am 4 feet tall or I am 4 years old
 
+# Now let's use the logical operators in our if statements
+age = int(input("Enter your age: "))
+height = float(input("Enter your height in feet: "))
+if age > 21 and height > 5.5:
+    print("You are tall and old enough to ride the roller coaster.")
+else:
+    print("You are not tall enough or old enough to ride the roller coaster.")
+
+# You try it using the OR operator
