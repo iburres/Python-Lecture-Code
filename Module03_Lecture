@@ -104,3 +104,5 @@ if answer_3 == "A candle":
     counter += 1
 print("You got", counter, "correct answers.")
 print(f"You got {counter} correct answers.")
+
+# %n.nf  %d  %s  %f

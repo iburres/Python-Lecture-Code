@@ -1,35 +1,80 @@
-#import random
+'''
+
+Module 4:  Repetition Structures and Random Number Generation
+Author: Ian Burres
+Date: 9/20/2021
 
 '''
-Repetition Structures
+import random
+#import pandas as pd
 
 '''
-#choice = input("Do you want to play a game? ")
-#loop = 11
-#user_choice = int(input("How many times should my loop run? "))   
- 
-#a_ran_num = random.randint(1, 3)
-#print(a_ran_num)
-#while loop (condition-controlled T/F)
+Random Number Generation
+
 '''
+rand_number = random.randint(0, 100) #generates a random number between 0 and 100
+print(rand_number)
+
+
+
+'''
+
+Repetition Structures, For loops and While loops
+
+'''
+#for-loop  (count-controlled)
+#can be programmed controlled or user controlled
+#Example of programmer controlled:
+#for num in range(0, 11):
+#    squared = num * num
+#    print(squared)
+#start = int(input("What number should i start at: "))
+#test/end = int(input("What number should we exit the loop: "))
+#increment/decrement = int(input("What number should we increment or decrement by:  "))
+#for i in range(start, end, increment):
+#    print(i)
+
+# Example 1:
+choice = input("Do you want to play a game? ")
+   
+
+if choice.lower() == "yes":
+    user_choice = int(input("How many times should my loop run? "))
+    
+    # user-controlled for loop
+    for i in range(0, user_choice):
+        print(f"Welcome to my game. This is loop number: {i}")
+
+for i in range(0, 11):
+    #do something here 11 times
+    pass #placeholder for code to be added later
+
+
+n = int(input("Enter a number: "))
+while n < 20:
+    print(n)
+    n += 1 # n = n + 1
+# while loop (condition-controlled T/F)
+
 while(choice.lower() == "yes"):
     print("Welcome to my game.")
-    users_number = int(input("Guess a number from 1 - 10:  "))
-    if(users_number != a_ran_num):
+    users_number = int(input("Guess a number from 1 - 100:  "))
+    if(users_number != rand_number):
         print("That is not the same number")
         choice = input("Do you want to play again? ")
     else:
-        print(f"That is the same number {a_ran_num}")
+        print(f"That is the same number {rand_number}")
         break
 #    loop -= 1
     # 40 lines of code
- '''   
+    
 
 #print("Goodbye")
 #number_made = random.randint(0,101)
 #if(number_made == 100):
 #    pass
-'''
+
+#my_boolean = True
 while True:
     choice = input("Do you want to play a game? ")
     if(choice.lower() == "no"):
@@ -37,15 +82,15 @@ while True:
         break
     else:
         continue
-'''    
-#for-loop  (count-controlled)
+ 
 
-#programmer controlled
-#start = int(input("What number should i start at: "))
-#test = int(input("What number should we exit the loop: "))
-#increment = int(input("What number should we increment by:  "))
-#for i in range(0, 11 ):
-#    print(i)
+#Nested Loops.  A loop within a loop.  When i is 0 the inner loop will run 9 times.  When i is 1 the inner loop will run 9 times.  When i is 2 the inner loop will run 9 times.  When i is 3 the inner loop will run 9 times.  4 * 9 = 36.  Total number of iterations.
+for i in range(0, 4): #outer loop. 
+    print(f"The value of i is: {i}")
+    for j in range(1, 10): #inner loop.  
+        print(f"The value of j is: {j} \n")
+        for k in range(10, 20):
+            print(k)
 
 '''
 print("\n-------------------")
