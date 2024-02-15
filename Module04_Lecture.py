@@ -6,7 +6,11 @@ Date: 9/20/2021
 
 '''
 import random
+import statistics
+import math
+import os   #operating system
 #import pandas as pd
+
 
 '''
 Random Number Generation
@@ -14,7 +18,7 @@ Random Number Generation
 '''
 rand_number = random.randint(0, 100) #generates a random number between 0 and 100
 print(rand_number)
-
+result = pow(2, 3)
 
 
 '''
@@ -42,13 +46,14 @@ if choice.lower() == "yes":
     user_choice = int(input("How many times should my loop run? "))
     
     # user-controlled for loop
-    for i in range(0, user_choice):
+    
+    for i in range(10, user_choice, -1):  #(start, end, increment/decrement)
         print(f"Welcome to my game. This is loop number: {i}")
 
-for i in range(0, 11):
+for i in range(1, 11):
     #do something here 11 times
-    pass #placeholder for code to be added later
-
+     #placeholder for code to be added later
+    pass
 
 n = int(input("Enter a number: "))
 while n < 20:
