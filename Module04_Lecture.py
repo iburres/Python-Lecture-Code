@@ -85,9 +85,11 @@ while True:
     if(choice.lower() == "no"):
         print("Goodbye again")
         break
+        #my_boolean = False
     else:
         continue
- 
+
+      
 
 #Nested Loops.  A loop within a loop.  When i is 0 the inner loop will run 9 times.  When i is 1 the inner loop will run 9 times.  When i is 2 the inner loop will run 9 times.  When i is 3 the inner loop will run 9 times.  4 * 9 = 36.  Total number of iterations.
 for i in range(0, 4): #outer loop. 
@@ -96,14 +98,32 @@ for i in range(0, 4): #outer loop.
         print(f"The value of j is: {j} \n")
         for k in range(10, 20):
             print(k)
+            
+for outer in range(0, 4):
+    print(outer)
+    for inner in range(0, 4):
+        print(inner)
+        for inner_inner in range(0, 4):
+            print(inner_inner)
+            
+            
+        
 
-'''
+
 print("\n-------------------")
 for num in [1,2,3,4]:
     print(num)
-'''
 
-'''
+movie_title = "The Last of the Mohicans"
+
+for letter in movie_title:
+    print(letter)
+    
+length = len(movie_title)
+print(length)
+
+
+
 #Sentinel Values
 patients_weight = int(input("Enter the first patients weight: "))
 num_of_patients = 1
@@ -116,18 +136,27 @@ while (patients_weight != 0):
     
 #using loops for input validation
 
+
+
 hours_worked = int(input("Enter the number of hours worked: "))
 hourly_pay = int(input("Enter your hourly pay rate: "))
 
+counter = 0
 while(hours_worked < 0 or hourly_pay < 0):
     print("ERROR: You cannot work negative hours or be paid negative dollars.")
     hours_worked = int(input("Enter the number of hours worked"))
     hourly_pay = int(input("Enter your hourly pay rate: "))
+    counter += 1
+    
+    if counter > 1:
+        print("You aren't very good at following directions.")
+        continue
+        
 income_total = hours_worked * hourly_pay
 print(f"Your gross pay for the week is: ${income_total:,} US Dollars")
 
 #Using the walrus operator to place it on one line
-'''
+
 '''
 while (score := int(input("Enter you score from 0 - 100: "))) < 0:
     print("A score cannot be negative.")
