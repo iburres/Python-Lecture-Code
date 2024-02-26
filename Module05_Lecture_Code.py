@@ -12,20 +12,38 @@ my_global = 5 # this variable can be called from any function in the module, unl
 # constants in Python are declared using all capital letters. Technically, Python does not have constants, but the convention is to declare a variable as a constant by using all capital letters.
 PI = 3.14159 # 
 
+PHRASE = "Hello, World!" # This is a constant. The value of a constant cannot be changed once it is declared.
+
 counter = 0
 
+def playing_with_constants():
+    #global PI # NEVER EVER EVER DO THIS. This is a bad practice. It is better to declare the constant as a global variable at the top of the module.
+    #PI = 2.14
+    print(PI)
+    print(PHRASE)
+    print(PI)
+    print(9 * PI)
+    
+def local_constant():
+    #global PI
+    PI = 2.14
+    print(PI)
+    print(PHRASE)
+    PI = 3.14
+    print(PI)
+    
+    
 def increment():
+    global counter
     counter += 1
     print(counter)
 
 #This function accepts a single argument in its parameter field and adds that number with a declared integer
 def addition(num_1, num_2):
-    
     #a = 4
     #x = 5
     total = num_1 + num_2 - my_global # The global variable my_global is used in the function now.
     #multiplication(total)
-    
     return total 
 
 def subtraction():
@@ -93,7 +111,7 @@ def gui():
         print(*result)
 
 # The forwared slash in the parameter field makes the parameters positional only
-def positional_arguments(a, b, c, /):
+def positional_arguments(a, b, c):
     print(a, b, c)
     
 
@@ -106,7 +124,8 @@ def keyword_in_middle(a, *, b, c):
     print(a, b, c)
     
 # passing a function as an argument to another function
-def function_as_argument(func, x, y):
+def function_as_argument(func, *, x, y):
+   
     return func(x, y)
 
 # chaging the order of the parameters in the function call
@@ -128,7 +147,7 @@ def change_global():
     print(my_global)
 
 def change_global_without_keyword():
-    my_global = 14
+    my_global = 14 
     print(my_global)   
     
 def try_to_change_constant():
@@ -143,13 +162,14 @@ if __name__ == "__main__":
     #product = multiplication(result)
     #print(product)
     #gui()
-    
+    #playing_with_constants()
+    local_constant()
     positional_arguments(1, 2, 3)
     keyword_arguments(a = 1, b = 2, c = 3) # keyword arguments must be used when calling the function. A keyword argument is a name-value pair that you pass to a function.
     
     changed_order(c = 3, a = 1, b = 2)
     keyword_arguments(name = "John", age = 25, city = "New York")
-    total = function_as_argument(addition, 5, 6)
+    total = function_as_argument(addition, x=5, y=6)
     print(total)
     
     # changed the order of the arguments in the function call
