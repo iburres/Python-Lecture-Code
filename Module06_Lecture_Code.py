@@ -3,13 +3,14 @@
 Module 06 Lecture Code
 
 '''
+import random
+
 #Opening a file in sequential mode and reading line by line.
 def read_files_by_line():
     
     file = open('/users/burres/desktop/Test.txt', 'r') # in windows, since you have a backslash, you need to use a raw string.  r'c:\users\burres\desktop\Test.txt' or two backslashes 'c:\\users\\burres\\desktop\\Test.txt'
     line_one = file.readline()
     print(f'{line_one}')
-    
     line_two = file.readline()
     print(f'{line_two}')
     
@@ -17,6 +18,14 @@ def read_files_by_line():
     print(f'{line_three}')
 
     file.close()
+    
+    length = len(line_one)
+    print(f'The length of the first line is {length}')
+    if "a" in line_one:
+        # count the number of times the letter a appears in the first line
+        count = line_one.count("a")
+        print(f"The letter a appears: {count} times in the first line")
+
    
 #opening a file and reading all of it's contents at once
 def read_whole_file():
@@ -25,6 +34,7 @@ def read_whole_file():
     contents = file.read()
     print(contents)
     file.close()
+    
  
 #writing to a file that does not exist.  Essentially creating a new file    
 def write_to_new_file():
@@ -61,15 +71,21 @@ def writing_integers_to_files():
 
 def reading_int_from_files():
     outFile = open(r"/users/burres/desktop/write_number.txt", "r" )
+    line_one = outFile.readline()
+    
     users_digit = int(input("Enter a number: "))
-    pass
+    result = int(line_one) + users_digit
+    print(result)
+    
 
 def skipping_line_space():
     
     with open(r'/users/burres/desktop/nurseryRhyme.txt', 'r') as file:
         for line in file:
             if not line.isspace():
-                file.write(line)    
+                print(line, end='')
+                
+                
 def main():
     read_files_by_line()
     #read_whole_file()
