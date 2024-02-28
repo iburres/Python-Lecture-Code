@@ -9,6 +9,7 @@ import random
 def read_files_by_line():
     
     file = open('/users/burres/desktop/Test.txt', 'r') # in windows, since you have a backslash, you need to use a raw string.  r'c:\users\burres\desktop\Test.txt' or two backslashes 'c:\\users\\burres\\desktop\\Test.txt'
+    
     line_one = file.readline()
     print(f'{line_one}')
     line_two = file.readline()
@@ -45,6 +46,10 @@ def write_to_new_file():
     file.write("Look at me, I can create a file and write to it at the same time.\n")     
     file.write("And look what happens\n")
     
+    user_input = input("Enter a line of text: ")
+    
+    file.write(user_input)
+    
     file.close()
     
 def another():
@@ -73,8 +78,8 @@ def reading_int_from_files():
     outFile = open(r"/users/burres/desktop/write_number.txt", "r" )
     line_one = outFile.readline()
     
-    users_digit = int(input("Enter a number: "))
-    result = int(line_one) + users_digit
+    #users_digit = int(input("Enter a number: "))
+    result = int(line_one) * 2
     print(result)
     
 
@@ -87,13 +92,13 @@ def skipping_line_space():
                 
                 
 def main():
-    read_files_by_line()
+    #read_files_by_line()
     #read_whole_file()
     #write_to_new_file()
     #another()
     #append_to_file()
     #writing_integers_to_files()
-    #reading_int_from_files()
+    reading_int_from_files()
     #skipping_line_space()
 
 if __name__ == "__main__":
