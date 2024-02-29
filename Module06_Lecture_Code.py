@@ -1,3 +1,5 @@
+# import for pdf document
+
 '''
 
 Module 06 Lecture Code
@@ -99,6 +101,8 @@ def reading_int_from_files():
     result = int(line_one) * 2
     print(result)
     
+    
+#  Letter 1 to 10 people c3po 100
 
 def skipping_line_space():
     
@@ -112,13 +116,12 @@ def skipping_line_space():
 # passing a file to another function
 def pass_file():
     file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
-    read_file(file)
+    receive_file(file)
     file.close()
 
 # receiving a file name as a parameter
-def read_file(file_name):
-    with open(file_name, 'r') as file:
-        for line in file:
+def receive_file(file_name): 
+        for line in file_name:
             if not line.isspace():
                 print(line, end='')
                 
@@ -136,7 +139,7 @@ def read_file_with_exceptions():
         file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
         for line in file:
             print(line, end='')
-    except IOError:
+    except (FileNotFoundError, IOError, OSError, PermissionError): # this is how to do multiple exceptions
         print("File not found")
         
 def loop_with_exceptions():
@@ -146,7 +149,7 @@ def loop_with_exceptions():
             print(f"The number you entered is {user_input}")
             break
         except ValueError: # you can have more than one except block
-            print("You did not enter a number.  Try again.")
+            print("You did not enter an integer number.  Try again.")
             
 def using_finaly():
     try:
@@ -171,7 +174,19 @@ def write_line(sentence):
     #with open(r'users/burres/desktop/user_file.txt', 'w') as file:
     #    file.write(sentence) 
     
-                
+def infinite_loop():
+    
+    #my_num = 5
+    
+    try:
+        my_num = 4
+        while(my_num != 5 ):
+            print("This loops forevery")
+            
+    except TimeoutError:
+        print("Hey programmer, you made an infinite loop")
+    
+               
 def main():
     #read_files_by_line()
     #read_whole_file()
@@ -181,12 +196,13 @@ def main():
     #writing_integers_to_files()
     #reading_int_from_files()
     #skipping_line_space()
-    #pass_file()
+    pass_file()
     #read_and_write()
     #read_file_with_exceptions()
     #loop_with_exceptions()
     #using_finaly()
     #users_line()
+    #infinite_loop()
     pass
 
 if __name__ == "__main__":
