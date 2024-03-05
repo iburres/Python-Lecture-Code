@@ -5,15 +5,20 @@ Module 7 Lecture Code
 
 #Lists
 
-#my_list = [9, 8, 18, 0, -4, 12, 15] #indexes are from 0 to N - 1
-#my_text_list = ["Orange", "Bananas", "Fruits"]
-#my_combo_list = ["Orange", 8, 3.45, "Cars"]
-#my_tuple = (4, 5, 8, 9) #tuples are the same
-#empty_list = []
 
+my_list = [9, 8, 10, 0, -4, 12, 15] #indexes are from 0 to N - 1
+my_text_list = ["Orange is the color of an orange", "Bananas", "Fruits"]
+my_combo_list = ["Orange", 8, 3.45, "Cars"]
+my_tuple = (4, 5, 8, 9) #tuples are the same
+empty_list = []
 
-'''
-#empty_tuple = ()
+voter_list = ["John", "Sally", "Mike", "Terrence", "Sophia", "Sandheep"]
+voter_choice = ['Republican', 'Democrat', 'Republican', 'Democrat', 'Republican', 'Democrat']
+
+location = voter_list.index("Terrence")
+print(f"Terrence voted: {voter_choice[location]}")
+
+empty_tuple = ()
 print(my_combo_list)
 #indexes are mutable, tuples are immutable
 length = len(my_combo_list)
@@ -28,40 +33,45 @@ my_list.append(6)
 
 print(my_list)
 
-my_list.insert(2, 10)
+i = 0
+my_list.insert(i, 10)
 #print(my_list)
 
 my_list[2] = 10
 print(my_list)
 
-try:
-    my_list.remove(5)
-    print(my_list)
-except ValueError:
-    print("That element is not in the list")
+while True:
+    try:
+        users_number = int(input("What number do you want to search for? "))
+        my_list.remove(users_number)
+        print(my_list)
+        break
+    except ValueError:
+        print("That element is not in the list")
 
-my_list.pop(3)
+my_list.pop(3) 
 print(my_list)
 
 del my_list[1]
 print(my_list)
 
-#this_is_a_list = "I love Python"
+this_is_a_list = "I love Python"
 
-#length = len(my_list)
-print("\n\n")
+length = len(this_is_a_list)
+print(length)
+print(this_is_a_list[2])
 
-#print(my_combo_list[1])
-#print(my_combo_list.index("Cars"))
+print(my_combo_list[1])
+print(my_combo_list.index("Cars"))
 
-#my_list.reverse()
-#print(my_list)
+my_list.reverse()
+print(my_list)
 
-#my_list.sort()
-#print(my_list)
+my_list.sort()
+print(my_list)
 #reverse
-#my_list.reverse()
-#print(my_list)
+my_list.reverse()
+print(my_list)
 
 
 #greadebook  with 10 grades, 0 -100
@@ -77,26 +87,26 @@ print(grade_book)
 
 total = sum(grade_book)
 length = len(grade_book)
-print(total / length)
-grade_book.remove(70)
+#print(total / length)
+##grade_book.remove(70)
 #print(grade_book)
 
 grade_book[2] = 100
 #print(grade_book)
 
-
+'''
 index = grade_book.index("troubador")
 print(index)
 
 grade_book[index] = 75
 #print(grade_book)
-'''
 
-'''
+
+
 PART 2
 
-'''
-'''
+
+
 grade_book = []
 how_many_grades = int(input("How many grades: "))
 for i in range(0, how_many_grades):
@@ -105,7 +115,7 @@ for i in range(0, how_many_grades):
     grade_book.insert(i, grade) #additional method
 
 print(grade_book)
-'''
+
 #converting tuples to lists
 my_tuple = (9, 5, 6, 0)
 my_list = list(my_tuple)
@@ -176,10 +186,10 @@ print(final_list.count("Ted"))
 
 #Student coding in class program
 #   .isalpha()   .isdigit()
-'''
+
 Using my_combo_list = ["Orange", 8, 3, 10, "Sam", -2,"Cars"]
 extract the strings from the list and sort them.  Print the new list to stdout
-'''
+
 
 
 
@@ -219,6 +229,6 @@ new_list = []
 for i in range(0, len(second_list)):
     new_list.append(first_list[i] + second_list[i])
 print(new_list)
-
+'''
 
         
