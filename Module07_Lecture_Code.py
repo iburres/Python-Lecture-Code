@@ -6,16 +6,26 @@ Module 7 Lecture Code
 #Lists
 
 
-my_list = [9, 8, 10, 0, -4, 12, 15] #indexes are from 0 to N - 1
+my_list = [9, 8, 12, 0, -4, 12, 15] #indexes are from 0 to N - 1
 my_text_list = ["Orange is the color of an orange", "Bananas", "Fruits"]
-my_combo_list = ["Orange", 8, 3.45, "Cars"]
+my_combo_list = ["8Orange", 8, 3.45, "/users/burres/desktop/texst.txt"]
 my_tuple = (4, 5, 8, 9) #tuples are the same
 empty_list = []
 
-voter_list = ["John", "Sally", "Mike", "Terrence", "Sophia", "Sandheep"]
+print(my_list[4])
+
+voter_list = ["John", "Sally", "Mike", "Terrence", "Sophia", "Sandheep", "Terrence"]
 voter_choice = ['Republican', 'Democrat', 'Republican', 'Democrat', 'Republican', 'Democrat']
 
+for elem in voter_list:
+    if elem == "Terrence":
+        location = voter_list.index(elem)
+        empty_list.append(location)
+        
+print(empty_list)
+
 location = voter_list.index("Terrence")
+print(voter_list.index("Terrence"))
 print(f"Terrence voted: {voter_choice[location]}")
 
 empty_tuple = ()
@@ -24,18 +34,24 @@ print(my_combo_list)
 length = len(my_combo_list)
 print(length)
 
+# looping through the elements of a list
+for i in range(0, length):
+    if i == 2:
+        my_combo_list[i] = 4
+    #print(my_combo_list[i])
 
+# use the in keyword to loop through the list
 for elem in my_combo_list:
     print(elem)
 
 
-my_list.append(6)
+#my_list.append(6)
 
 print(my_list)
 
 i = 0
-my_list.insert(i, 10)
-#print(my_list)
+my_list.insert(7, 24)
+print(f" WOOHOOO: {my_list}")
 
 my_list[2] = 10
 print(my_list)
