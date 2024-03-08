@@ -42,15 +42,31 @@ for i in range(0, length):
 
 # use the in keyword to loop through the list
 for elem in my_combo_list:
-    print(elem)
+    
+    if "Cars" in my_combo_list:
+        print(elem)
+    else:
+        print("That item is not in the list")
+
+elias_question = ["Cars", "Planes", "Trucks", "Automobiles", "Cars"]
+
+total_occurences = []
+
+for elem in elias_question:
+    if "Cars" in elias_question:
+        total_occurences.append(elem)
+        
+
 
 
 #my_list.append(6)
 
 print(my_list)
 
+
+
 i = 0
-my_list.insert(7, 24)
+my_list.insert(7, 24) # inserts a value at index and shifts all values to the right
 print(f" WOOHOOO: {my_list}")
 
 my_list[2] = 10
@@ -59,17 +75,25 @@ print(my_list)
 while True:
     try:
         users_number = int(input("What number do you want to search for? "))
-        my_list.remove(users_number)
+        my_list.remove(users_number) # simply removes the element from the list but shifts everyghin to the left. 
         print(my_list)
         break
     except ValueError:
         print("That element is not in the list")
+        
 
-my_list.pop(3) 
-print(my_list)
 
-del my_list[1]
+result = my_list.pop(3) #removes and returns value if we store it in a variable
+
 print(my_list)
+print(result)
+
+
+del my_list # will delete the whole list
+del my_list[3:5] # delete a slice of the list
+
+
+#print(my_list)
 
 this_is_a_list = "I love Python"
 
@@ -78,7 +102,7 @@ print(length)
 print(this_is_a_list[2])
 
 print(my_combo_list[1])
-print(my_combo_list.index("Cars"))
+#print(my_combo_list.index("Cars"))
 
 my_list.reverse()
 print(my_list)
@@ -86,7 +110,7 @@ print(my_list)
 my_list.sort()
 print(my_list)
 #reverse
-my_list.reverse()
+my_list.reverse() # will not print an unsorted list in descending order
 print(my_list)
 
 
@@ -109,6 +133,8 @@ length = len(grade_book)
 
 grade_book[2] = 100
 #print(grade_book)
+
+
 
 '''
 index = grade_book.index("troubador")
