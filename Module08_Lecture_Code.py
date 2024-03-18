@@ -6,12 +6,14 @@ Module 8 - Lecture Code
 
 @author: iburr
 """
-
-
-
 '''
+#I love programming 99. That's a 1 number 0
+
+
 #searching for a value in the string
+letters = "owjefoiaAIFoefooewfj"
 char = input("What letter would you like to search for? ")
+
 
 if char in letters:
     print(f"the letter {char} was found in the string")
@@ -21,9 +23,16 @@ else:
     
 
 #accessing a specific index value in the string
-element = letters[5] #value
-index = letters.index(char)  #numbe associated with the value
-print(f'The element {element} is located at index {index}')
+while True:
+    try:
+    #element = letters[5] #value
+        index = letters.index(char)  #number associated with the value
+        print(f'The element {char} is located at index {index}')
+        break
+    except:
+        print("That letter is not in the string and would have caused a Traceback error.")
+        char = input("What letter would you like to search for? ")
+    
 
 #concatenating strings
 numbers = '123456'
@@ -31,19 +40,22 @@ numbers = '123456'
 combined = numbers + letters
 print(f"{numbers} {letters}")
 
+letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 #slicing strings
 first_half = letters[0:13] 
 second_half = letters[13:]
 print(first_half, second_half)
 
 
-letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+#letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 letters2 = 'abcDefghijklmnoPqrstuVxyz'
 #the FIND method
-phrase = "Red ballons"
-lower = phrase.lower()
-print(lower)
-position = phrase.find(lower)
+phrase = "Red balloons" 
+#lower = phrase.lower()
+#print(lower)
+
+
+position = phrase.find("tim")
 
 if position != -1:
     
@@ -73,10 +85,11 @@ print(result)
 result2 = letters.upper()
 print(result2)
 '''
+
 #string testing methods
 import random 
 
-random.randint()
+#random.randint()
 
 def isSpecial(passPhrase):
     
@@ -86,9 +99,7 @@ def isSpecial(passPhrase):
             return True
         else:
             continue
-                
-        
-        
+                   
     
     
 def menu():
@@ -96,7 +107,7 @@ def menu():
     #user_choice = isSpecial(phrase)
     if user_choice.isalnum():
         print("The string is alphanumeric")
-        
+
     if user_choice.isdigit():
         print("The string contains only numbers")
         
