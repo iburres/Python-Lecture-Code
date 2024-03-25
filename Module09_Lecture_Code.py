@@ -10,8 +10,8 @@ Module 9 - Dictionaries
 import json
 
 
-#Here is the gradebook from Lab 2 expressed more concisely as a dictionary
-#Notice how it will be much easier to change a grade using a dictionary
+#Here is the gradebook expressed concisely as a dictionary
+
 #We use a list to pair each grade with the key (which is each student's name)
 
 grade_book = {'Gina': [100, 90, 10], 'Tina': [45, 50, 48], 'Rob': [78, 84, 82]}
@@ -21,7 +21,7 @@ student_name = input("Enter the students name to see their respective grades: ")
 
 if student_name in grade_book:
     
-    print(grade_book[student_name])
+    print(grade_book[student_name]) # The ord character * will remove the brackets from the list. 
 
 #works like ELSE, but actually searches through the dictionary    
 if student_name not in grade_book:

@@ -6,10 +6,10 @@ Module 8 - Lecture Code
 
 @author: iburr
 """
-'''
+
 #I love programming 99. That's a 1 number 0
 
-
+'''
 #searching for a value in the string
 letters = "owjefoiaAIFoefooewfj"
 char = input("What letter would you like to search for? ")
@@ -24,6 +24,7 @@ else:
 
 #accessing a specific index value in the string
 while True:
+    
     try:
     #element = letters[5] #value
         index = letters.index(char)  #number associated with the value
@@ -38,7 +39,7 @@ while True:
 numbers = '123456'
 
 combined = numbers + letters
-print(f"{numbers} {letters}")
+print(f"{numbers}{letters}")
 
 letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 #slicing strings
@@ -51,8 +52,8 @@ print(first_half, second_half)
 letters2 = 'abcDefghijklmnoPqrstuVxyz'
 #the FIND method
 phrase = "Red balloons" 
-#lower = phrase.lower()
-#print(lower)
+lower = phrase.lower()
+print(lower)
 
 
 position = phrase.find("tim")
@@ -75,7 +76,7 @@ else:
     print("The file is not a text file")
     
 #replacing values
-newPhrase = phrase.replace("ballons", "apples")
+newPhrase = phrase.replace("balloons", "apples")
 print(newPhrase)
 
 #converting the letters above into all lower case letters
@@ -87,7 +88,7 @@ print(result2)
 '''
 
 #string testing methods
-import random 
+#import random 
 
 #random.randint()
 
@@ -99,12 +100,14 @@ def isSpecial(passPhrase):
             return True
         else:
             continue
-                   
-    
+                     
     
 def menu():
     user_choice = input("Please enter a passphrase: ")
+    length = len(user_choice)
     #user_choice = isSpecial(phrase)
+    if length >= 8:
+        print("The password has the correct length")
     if user_choice.isalnum():
         print("The string is alphanumeric")
 
