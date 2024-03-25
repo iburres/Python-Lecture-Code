@@ -14,14 +14,15 @@ import json
 
 #We use a list to pair each grade with the key (which is each student's name)
 
-grade_book = {'Gina': [100, 90, 10], 'Tina': [45, 50, 48], 'Rob': [78, 84, 82]}
+grade_book = {'Gina': [100, 90, 10], 'Tina': [45, 50, 48], 'Rob': [78, 84, 82], 'Jake': {'Sub-grades': [0, 1, 2]}}
 
 #FINDING A VALUE IN A DICTIONARY 
 student_name = input("Enter the students name to see their respective grades: ")
 
 if student_name in grade_book:
     
-    print(grade_book[student_name]) # The ord character * will remove the brackets from the list. 
+    #print(grade_book[key])
+    print(*grade_book[student_name]) # The ord character * will remove the brackets from the list. 
 
 #works like ELSE, but actually searches through the dictionary    
 if student_name not in grade_book:
@@ -39,12 +40,13 @@ if student_name in grade_book:
     for key in grade_book:
         #remember, it follows key:value pairs, so we reference the key then the value as grade_change
        
+        #grade_book['Tina'][1]
         grade_book[student_name][grade_change] = new_value
     
     print(grade_book)
 
 #WRITING THE GRADE_BOOK TO A TEXT FILE USING JSON, FOR LOOPS, AND STRING CONVERSION
-with open(r'C:\Users\iburr\OneDrive\Desktop\NewGradeBook.txt', 'w') as file:
+with open(r'/Users/burres/Desktop/NewGradeBook.txt', 'w') as file:
     
     #USING A FOR LOOP TO ITERATE OVER THE DICTIONARY
     for key, value in grade_book.items():
@@ -65,6 +67,7 @@ phonebook = {'Karl': '555-9832', 'Tim': '754-3220', 'Nelly': '954-8774'}
 print(phonebook)
 
 #ADDING AN ELEMENT TO THE DICTIONARY
+#dictionary[key]
 phonebook['Karl'] = '954-8998'
 phonebook['Terrence'] = '305-5565'
 #notice how it replaced the value associated with Karl but adds Terrence 
@@ -99,12 +102,12 @@ print(phonebook)
 number1 = phonebook.get('Karl', 'number not found')
 print(number1)
 
-number2 = phonebook.get('John', "Phone number not found")
+phonebook = {'Johnny': '999-9999'}
+number2 = phonebook.get('John')
 print(number2)
 
 #PRINTING OUT ALL OF THE ITEM IN A DICTIONARY
-print(phonebook.items()) 
-
+print(phonebook.items())  
 new_phonebook = {'John': '754-8765', 'Turqouise': '555-5555'} 
 
 for name in new_phonebook.items():
@@ -149,11 +152,14 @@ print(mySet)
 myListSet = set([1, 2, 3, 1])
 
 length = len(myListSet)
-
+print(length)
+#myListSet.add('b')
 myListSet.add('a')
+length2 = len(myListSet)
 print(myListSet)
+print(length2)
 
-myListSet.update([9,6,10])
+myListSet.update([9,6,10, 'b'])
 print(myListSet)
 
 myListSet.remove(6)  #also .discard()
