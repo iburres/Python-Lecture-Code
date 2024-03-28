@@ -51,7 +51,7 @@ print(mystring)
 
 #WRITING THE GRADE_BOOK TO A TEXT FILE USING JSON, FOR LOOPS, AND STRING CONVERSION
 
-with open(r'C:\Users\iburr\OneDrive\Desktop\NewGradeBook.txt', 'w') as file:
+with open(r'NewGradeBook.txt', 'w') as file:
     
     #USING A FOR LOOP TO ITERATE OVER THE DICTIONARY
     for key, value in grade_book.items():
