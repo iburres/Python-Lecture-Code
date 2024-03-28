@@ -14,7 +14,7 @@ import json
 
 #We use a list to pair each grade with the key (which is each student's name)
 
-grade_book = {'Gina': [100, 90, 10], 'Tina': [45, 50, 48], 'Rob': [78, 84, 82], 'Jake': {'Sub-grades': [0, 1, 2]}}
+grade_book = {'Gina': [100, 90, 10], 'Tina': [45, 50, 48], 'Rob': [78, 84, 82], 'Jake': {'Sub-grades': [0, 1, 2]}, 10: 'Mustang'}
 
 #FINDING A VALUE IN A DICTIONARY 
 student_name = input("Enter the students name to see their respective grades: ")
@@ -44,6 +44,10 @@ if student_name in grade_book:
         grade_book[student_name][grade_change] = new_value
     
     print(grade_book)
+    
+mylist = [1,2,3]
+mystring = str(mylist)
+print(mystring)
 
 #WRITING THE GRADE_BOOK TO A TEXT FILE USING JSON, FOR LOOPS, AND STRING CONVERSION
 with open(r'/Users/burres/Desktop/NewGradeBook.txt', 'w') as file:
