@@ -1,0 +1,102 @@
+#Module 10 - Introdction to Classes and Objects
+
+# A Class is a blueprint for creating objects.  Objects have attributes and methods.  We use methods to interact with the objects.  
+
+# Person Class
+class Person:
+    # Constructor (the __init__ is called a dunder method)
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    # the self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class.  It does not have to be named self, you can call it whatever you want, but it is standard to use self.
+    
+    # Box 
+    
+    # Method
+    def say_hello(self):
+        print(f"Hello, my name is {self.name} and I am {self.age} years old.") 
+
+# we can have another class in the same file.  We can also create a second file that stores this class in it, and we can later call methods from the class and instantiate objects from that class. 
+class Dog:
+    
+    #class attributes
+    name = ""
+    breed = ""
+    
+    def __init__(self, name, breed):
+        self._name = name # _name is a private field
+        self._breed = breed # _breed is a private field
+    
+    # Python does not support overloading constructors. 
+    #def __init__(self):
+    #    self._name = " "
+    #    self._breed = " "    
+    
+    # The __str__ method is called when we use the print() function to print an object.  It returns a string representation of the object, rather than the address associated with the class referenc variable.
+    def __str__(self):
+        return f"{self._name} is a {self._breed}."
+    
+    # Accessor and mutator methods:
+    
+    #setters are access methods that allow us to set the value of a private field.  They are also called mutator methods.
+    def set_name(self, name):
+        self.name = name
+
+    def set_breed(self, breed):
+        self.breed = breed
+    
+    #getters are access methods that allow us to access the value of a private field.  They are also called accessor methods.    
+    def get_name(self):
+        return self.name
+    
+    def get_breed(self):
+        return self.breed
+    
+    def bark(self):
+        print(f"{self.name} says Woof!")
+
+    def sit(self):
+        print(f"{self.name} sits down.")
+
+    def roll_over(self):
+        print(f"{self.name} rolls over.")
+
+    def shake(self):
+        print(f"{self.name} shakes hands.")
+
+    def lay_down(self):
+        print(f"{self.name} lays down.")
+
+    def fetch(self):
+        print(f"{self.name} fetches the ball.")
+
+    def speak(self):
+        print(f"{self.name} speaks.")
+   
+      
+if __name__ == "__main__":
+    # Create an object of the Person class
+    person1 = Person("Alice", 25)
+    person1.say_hello()
+    print(person1)
+
+    person2 = Person("Bob", 30)
+    person2.say_hello()
+
+    person3 = Person("Charlie", 35)
+    person3.say_hello()
+
+    person4 = Person("David", 40)
+    person4.say_hello()
+    
+    dog0 = Dog("Buddy", "Cocker Spaniel")
+    print(dog0) # this will print the address of the object in memory.  We can overload the __str__ method to print the name and breed of the dog.
+    #print(str(dog0))
+    dog0.bark()
+    dog0.sit()
+    
+    # dog1 = Dog() # this would throw an error if we did not have the overloaded constructor above. 
+    dog0.set_name("Fido")
+    dog0.set_breed("Golden Retriever")
+    print(dog0.get_name())
+    print(dog0.get_breed())

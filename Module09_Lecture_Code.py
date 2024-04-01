@@ -6,6 +6,9 @@ Module 9 - Dictionaries
 
 @author: iburr
 """
+
+
+'''
 #we will use this import to write dictionaries to files
 import json
 
@@ -147,14 +150,15 @@ print(squares)
 #LOOK AT PAGE 492, Using if Clauses
 
 #-------------------------------------------------------------------------------
-
+'''
 #SETS
 
 mySet = set()
 mySet = 'abc'
 print(mySet)
 
-myListSet = set([1, 2, 3, 1])
+myListSet = set([3, 2, 4, 4])
+print(myListSet)
 
 length = len(myListSet)
 print(length)
@@ -164,10 +168,10 @@ length2 = len(myListSet)
 print(myListSet)
 print(length2)
 
-myListSet.update([9,6,10, 'b'])
+myListSet.update([9, 6, 10, 'b'], [0, 10])
 print(myListSet)
 
-myListSet.remove(6)  #also .discard()
+myListSet.remove(10)  #also .discard()
 print(myListSet)
 
 myListSet.clear() #removes everything
