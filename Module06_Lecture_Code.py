@@ -21,7 +21,7 @@ open() function = open a file.  You can use this to create a file with the "w" m
 close() function = close a file
 with open() as file: = Can be used to open a file and automatically close it when the block is done.  This is a good way to handle files. However, you cannot create a new file with the with statement.  The file must already exist!!!!
 
-'''
+
 import random
 
 #Opening a file in sequential mode and reading line by line.
@@ -207,3 +207,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+'''
