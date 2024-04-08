@@ -39,8 +39,8 @@ class Dog:
     # Accessor and mutator methods:
     
     #setters are access methods that allow us to set the value of a private field.  They are also called mutator methods.
-    def set_name(self, name):
-        self.name = name
+    def set_name(self, _name):
+        self.name = _name
 
     def set_breed(self, breed):
         self.breed = breed
