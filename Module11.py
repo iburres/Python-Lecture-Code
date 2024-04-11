@@ -74,13 +74,23 @@ class Car(Vehicle):
         super().__init__(make, model, year)
         self.__doors = doors
         
+    #def __init__(self):
+    #    pass
+    
     def display_info(self):
         print(f'{self._Vehicle__year} {self._Vehicle__make} {self._Vehicle__model} with {self.__doors} doors')
         
         
 if __name__ == '__main__':
-    animal = Animal('Animal', 10)
+    
+    animal_type = input('Enter the type of animal: ')
+    animals_age = int(input('Enter the age of the animal: '))
+    
+    animal = Animal(animal_type, animals_age)
     animal.speak()
+    
+    #creating an object from the no-argument constructor
+    #animal = Animal()
     
     dog = Dog('Killer', 5, 'German Shepherd')
     dog.speak()
