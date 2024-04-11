@@ -5,6 +5,8 @@
 # Player class -> wizards, fighters, thieves.
 # Enemy class -> dragons, orcs, (Alyssas) Titan....
 
+#Structures - > Houses -> 2 story houses, 3 story houses, 4 story houses
+
 # Inheritance: A way to form new classes using classes that have already been defined.
 # Some keywords to know:
 #   - base class: The class that is being inherited from (also called parent class or superclass).
@@ -36,7 +38,7 @@ class Dog(Animal): #subclass inherits from superclass
 
     #overriding
     def speak(self):
-        print(f'{self.name} is barking')
+        print(f'{self.name} is a {self.breed} and is barking')
         
     
         
@@ -80,7 +82,7 @@ if __name__ == '__main__':
     animal = Animal('Animal', 10)
     animal.speak()
     
-    dog = Dog('Max', 5, 'German Shepherd')
+    dog = Dog('Killer', 5, 'German Shepherd')
     dog.speak()
     
     #creating an object of the Car class
