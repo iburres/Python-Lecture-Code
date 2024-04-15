@@ -5,7 +5,7 @@
         
         Recursion is a technique in programming where a function calls itself.
         
-        Anything that can be done with recursion can also be done iteratively.
+        Anything that can be done with recursion can also be done iteratively and vice versa.
         
         Recursion is often used to solve problems that can be broken down into smaller, repetitive problems.
         
