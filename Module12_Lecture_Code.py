@@ -15,6 +15,25 @@
         
         Recursion uses the call stack to keep track of function calls.
 '''
+#4! = 4 * 3 * 2 * 1 = 24
+
+#Pseudo code Iterative solution for factorial of 4:
+# accum = 4, and n = accum - 1
+# now reduce n by 1 for pass through the loop
+# accum * (n) = 12
+# accum = 12
+# accum * (n)
+# Take the number and multiply by 1 less than the number.
+# Store that value into accumulator
+
+'''
+             fac(0) 1
+          fac(1)       1 
+        fac(2)            2     
+       fac(3)               6
+     fac(4)                    24
+    fac(5)                        120
+'''
 
 def factorial(n):
     
@@ -45,5 +64,5 @@ def isPowerOfTwo(n):
 
   
 if __name__ == "__main__":
-    print(factorial(5))
-    print(isPowerOfTwo(16))
+    print(factorial(15))
+    print(isPowerOfTwo(3))
