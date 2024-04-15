@@ -27,14 +27,23 @@ def factorial(n):
 # Given an integer n, return true if it is a power of two. Otherwise, return false. An integer n is a power of two, if there exists an integer x such that n == 2x.
 
 def isPowerOfTwo(n):
+    # We can have two base cases, such as: n == 1 and n % 2 != 0 or n == 0
     if n == 1:
         return True
-    elif n % 2 != 0 or n == 0:
+    elif n % 2 != 0 or n == 0: 
         return False
     else:
         return isPowerOfTwo(n // 2)
+    
+# Let's see how this looks on the call stack:
+# isPowerOfTwo(16)
+# isPowerOfTwo(8)
+# isPowerOfTwo(4)
+# isPowerOfTwo(2)
+# isPowerOfTwo(1) -> True
+# isPowerOfTwo(0) -> False
 
-   
+  
 if __name__ == "__main__":
-    factorial(5)
-    isPowerOfTwo(16)
+    print(factorial(5))
+    print(isPowerOfTwo(16))
