@@ -17,7 +17,7 @@
 '''
 #4! = 4 * 3 * 2 * 1 = 24
 
-#Pseudo code Iterative solution for factorial of 4:
+# Pseudo code Iterative solution for factorial of 4:
 # accum = 4, and n = accum - 1
 # now reduce n by 1 for pass through the loop
 # accum * (n) = 12
@@ -38,7 +38,7 @@
 def factorial(n):
     
     # Base case
-    if n == 0:
+    if n == 1:
         return 1
     else:
         return n * factorial(n - 1) # Recursive call, meaning the function calls itself.
@@ -64,5 +64,5 @@ def isPowerOfTwo(n):
 
   
 if __name__ == "__main__":
-    print(factorial(15))
-    print(isPowerOfTwo(3))
+    print(factorial(5))
+    print(isPowerOfTwo(16))
