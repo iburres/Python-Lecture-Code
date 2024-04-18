@@ -62,7 +62,15 @@ def isPowerOfTwo(n):
 # isPowerOfTwo(1) -> True
 # isPowerOfTwo(0) -> False
 
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
   
 if __name__ == "__main__":
-    print(factorial(5))
-    print(isPowerOfTwo(16))
+    #print(factorial(5))
+    #print(isPowerOfTwo(16))
+    print(fibonacci(8))
