@@ -15,8 +15,21 @@
         9. {n} - Exactly n of the preceding character
         10. {n,} - n or more of the preceding character
         11. {n,m} - Between n and m of the preceding character
+        
+        Special Sequences:
         12. \ - Escape character
         13. \s - Whitespace
+        14. \S - Not whitespace
+        15. \d - Digit
+        16. \D - Not digit
+        17. \w - Word character
+        18. \W - Not word character
+        20. | - Or
+        21. (...) - Group
+        22. \b - Word boundary
+        23. \B - Not word boundary
+        24. \A - Start of string
+        25. \Z - End of string
         
         and many more...
 '''
@@ -54,11 +67,65 @@ def abc123(n):
         return True
     return False
 
+def using_split(n):
+    
+    # Split the string into a list using regex
+    n_list = re.split(r'\s', n)
+    print(n_list)
+    
+# We can use regex to validate user input, to make sure it is in the correct format, and to 
+# extract information from a string. 
 
+# find regex in a string
+def find_regex():
+    '''
+        Function to find a regex in a string
+    '''
+    import re
+    string = 'The quick brown fox jumps over the lazy dog'
+    regex = r'\b\w{5}\b'
+    result = re.findall(regex, string)# we are using the regex declared above to find all the words that are 5 characters long
+    print(result)
+
+# using match
+def using_match():
+    '''
+        Function to use match
+    '''
+    # match checks for a match only at the beginning of the string
+    import re
+    string = 'The quick brown fox jumps over the lazy dog'
+    regex = r'\b\w{3}\b'
+    result = re.match(regex, string)# match returns None if the regex is not found at the beginning of the string and returns the match if it is found based on the index
+    print(result)
+    
+#findall() - returns a list containing all matches
+def using_findall():
+    '''
+        Function to use findall
+    '''
+    import re
+    string = 'The quick brown fox jumps over the lazy dog'
+    regex = r'\b\w{3}\b'
+    result = re.findall(regex, string)
+    print(result)
+
+def using_sub():
+    import re
+
+    txt = "The rain in Spain"
+    x = re.sub("\s", "9", txt)# replace all the whitespaces with 9
+    print(x)  
+    
 
 if __name__ == '__main__':
     print(regex_email('john.smith@utsa.edu'))
     print(regex_phone('210-45S-4433'))
     print(zero_or_more(''))
     print(abc123('tty677'))
+    using_split("Hello World of Python")
+    find_regex()
+    using_match()
+    using_findall()
+    using_sub()
     
