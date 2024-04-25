@@ -142,10 +142,17 @@ def forward_looking_with_no_match():
     # output 
     print(example)
     
+def not_in_string():
+    
+    import re
+    
+    example = re.search(r'^[^y]*$', 'zang')
+    print(example)
+    
 
 if __name__ == '__main__':
     print(regex_email('99@utsa.edu'))
-    print(regex_phone('210-45S-4433'))
+    print(regex_phone('(210)-45S-4433'))
     print(zero_or_more(''))
     print(abc123('tty677'))
     using_split("Hello World of Python")
@@ -155,4 +162,5 @@ if __name__ == '__main__':
     using_sub()
     forward_looking_assertion()
     forward_looking_with_no_match()
+    not_in_string()
     

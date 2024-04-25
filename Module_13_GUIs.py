@@ -4,10 +4,12 @@
 '''
 from tkinter import *
 
+
 root = Tk()
 root.geometry('700x400')  # Set the size of the window
+
 def draw_rectangle():
-    
+    #root2 = Tk()
     canvas = Canvas(root)  # Add the 'root' argument to the Canvas constructor
     canvas.pack()
     
@@ -47,6 +49,8 @@ def draw_circle_centered():
     width = canvas.winfo_reqwidth()
     height = canvas.winfo_reqheight()   
     
+    center_x = width/2
+    center_y = height/2
     
     #draw a circle centered in the window
     canvas.create_oval(width/2-50, height/2-50, width/2+50, height/2+50, outline='black', fill='white', width=2)
