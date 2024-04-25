@@ -117,9 +117,34 @@ def using_sub():
     x = re.sub("\s", "9", txt)# replace all the whitespaces with 9
     print(x)  
     
+# forward looking assertion. 
+def forward_looking_assertion():
+    
+    import re
+    
+    # lookahead example 
+    example = re.search(r'geeks(?=[a-z])', "geeksforgeeks") 
+    
+  
+# display output 
+    print("Pattern:", example.group()) 
+    print("Pattern found from index:", 
+      example.start(), "to", 
+      example.end())
+    
+def forward_looking_with_no_match():
+    
+    import re
+    
+    example = re.search(r'geeks(?=[a-z])',  
+                    "geeks123") 
+  
+    # output 
+    print(example)
+    
 
 if __name__ == '__main__':
-    print(regex_email('john.smith@utsa.edu'))
+    print(regex_email('99@utsa.edu'))
     print(regex_phone('210-45S-4433'))
     print(zero_or_more(''))
     print(abc123('tty677'))
@@ -128,4 +153,6 @@ if __name__ == '__main__':
     using_match()
     using_findall()
     using_sub()
+    forward_looking_assertion()
+    forward_looking_with_no_match()
     
