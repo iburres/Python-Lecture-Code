@@ -77,6 +77,7 @@ def interactive_gui_with_buttons():
     button.pack()
     canvas.pack()
     
+    #listener and onEvent, onAction
     #bind the button to the draw_circle function
     button.bind("<Button-1>", on_click)
     
