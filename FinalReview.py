@@ -10,9 +10,10 @@ def reversingLists():
     # Solution 1:
     song_array.reverse()
     
-    reversed_array = reversed(song_array)
+    #reversed_array = reversed(song_array)
     
-    print(song_array)
+    
+    print(song_array) #this works because we reversed the list on line 11. 
     
     #Solution 2:
     empty_list = []
