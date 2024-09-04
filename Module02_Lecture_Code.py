@@ -20,7 +20,6 @@
 #variable names can't start with a number, can't have spaces, can't have special characters.
 #variable names should be descriptive and meaningful
 
-
 #strings
 students_name = "Alice"  # This is a variable of type string, since it contains only characters
 students_ID = "784564"   # This is also a string.  The nunbers in the string are just symbols. Can't do math!!
