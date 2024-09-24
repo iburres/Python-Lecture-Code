@@ -154,19 +154,20 @@ def try_to_change_constant():
     PI = 2.7 # This will work because Python does not support true constants. 
     print(PI)
 
-if __name__ == "__main__":
+if __name__ == "__main__":  
     #x = int(input("Enter a number: "))
     #y = int(input("Enter another number: "))
     #result = addition(x, y)
-    
+    #def gui():
+    #    print("hello world")   Can do this, but alternate method is preferred. 
     #product = multiplication(result)
     #print(product)
-    #gui()
+    gui()
     #playing_with_constants()
     local_constant()
     positional_arguments(1, 2, 3)
     keyword_arguments(a = 1, b = 2, c = 3) # keyword arguments must be used when calling the function. A keyword argument is a name-value pair that you pass to a function.
-    
+    compute(7)
     changed_order(c = 3, a = 1, b = 2)
     keyword_arguments(name = "John", age = 25, city = "New York")
     total = function_as_argument(addition, x=5, y=6)
