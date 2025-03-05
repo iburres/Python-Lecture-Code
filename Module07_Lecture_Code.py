@@ -4,12 +4,12 @@ Module 7 Lecture Code
 '''
 
 #Lists
-
+GRAVITY = 9.8
 
 my_list = [9, 8, 12, 0, -4, 12, 15] #indexes are from 0 to N - 1
 my_text_list = ["Orange is the color of an orange", "Bananas", "Fruits"]
-my_combo_list = ["8Orange", 8, 3.45, "/users/burres/desktop/texst.txt"]
-my_tuple = (4, 5, 8, 9) #tuples are the same
+my_combo_list = ["8Orange", 8, 3.45, "/users/burres/desktop/texst.txt", [0, 1], [1, [ ], 8 ]]
+my_tuple = (4, 5, 8, 9, GRAVITY) #tuples are the same
 empty_list = []
 
 print(my_list[4])
@@ -17,10 +17,14 @@ print(my_list[4])
 voter_list = ["John", "Sally", "Mike", "Terrence", "Sophia", "Sandheep", "Terrence"]
 voter_choice = ['Republican', 'Democrat', 'Republican', 'Democrat', 'Republican', 'Democrat']
 
-for elem in voter_list:
-    if elem == "Terrence":
-        location = voter_list.index(elem)
-        empty_list.append(location)
+length = len(voter_list)
+start = 0
+while start < length:
+    for elem in voter_list:
+        if elem == "Terrence":
+            location = voter_list.index(elem)
+            empty_list.append(location)
+    start += 1
         
 print(empty_list)
 

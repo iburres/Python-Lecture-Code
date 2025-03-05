@@ -9,7 +9,7 @@ Module 8 - Lecture Code
 
 #I love programming 99. That's a 1 number 0
 
-'''
+
 #searching for a value in the string
 letters = "owjefoiaAIFoefooewfj"
 char = input("What letter would you like to search for? ")
@@ -44,7 +44,7 @@ print(f"{numbers}{letters}")
 letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 #slicing strings
 first_half = letters[0:13] 
-second_half = letters[13:]
+second_half = letters[13:27]
 print(first_half, second_half)
 
 
@@ -85,7 +85,6 @@ print(result)
 
 result2 = letters.upper()
 print(result2)
-'''
 
 #string testing methods
 #import random 
@@ -100,32 +99,30 @@ def isSpecial(passPhrase):
             return True
         else:
             continue
-                     
+                    
     
 def menu():
-    user_choice = input("Please enter a passphrase: ")
-    length = len(user_choice)
-    #user_choice = isSpecial(phrase)
+    passPhrase = input("Please enter a passphrase: ")
+    length = len(passPhrase)
     if length >= 8:
         print("The password has the correct length")
-    if user_choice.isalnum():
+    if passPhrase.isalnum(): 
         print("The string is alphanumeric")
-
-    if user_choice.isdigit():
+        
+    if passPhrase.isdigit(): 
         print("The string contains only numbers")
         
-    if user_choice.isalpha():
+    if passPhrase.isalpha(): 
         print("The string contains only letters")
         
-    if user_choice.islower():
+    if passPhrase.islower(): 
         print("the string contains only lowercase letters")
         
-    if user_choice.isupper():
-        
+    if passPhrase.isupper():
         print("The string has all upper case letters")
     
-    if isSpecial(user_choice):
-        print("The string also contains a special character")
+    if (isSpecial(passPhrase)):
+        print("The string also contains a special character and is alphanumeric")
         
 if __name__ == "__main__":
     menu()
