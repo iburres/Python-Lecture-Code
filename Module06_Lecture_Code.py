@@ -36,10 +36,16 @@ def read_files_by_line():
     
     line_three = file.readline()
     print(f'{line_three}')
+    
+    print(file.readline() + line_three)
 
     file.close()
+<<<<<<< HEAD
      
     
+=======
+    counter = 0
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     length = len(line_one)
     print(f'The length of the first line is {length}')
     if "a" in line_one:
@@ -64,7 +70,7 @@ def write_to_new_file():
 
 
     file.write("Look at me, I can create a file and write to it at the same time.\n")     
-    file.write("And look what happens\n")
+    file.write("And look what happens.\n")
     
     user_input = input("Enter a line of text: ")
     
@@ -88,6 +94,7 @@ def append_to_file():
 
 def writing_integers_to_files():
     #you will do this one with me
+<<<<<<< HEAD
     try:
         outFile = open(r"c:\\users\\iburr\\documents\\write_number.txt", "w" )
         users_digit =int(input("Enter a number: "))
@@ -100,6 +107,22 @@ def writing_integers_to_files():
 def reading_int_from_files():
     outFile = open(r"c:\\users\\iburr\\documents\\write_number.txt", "r" )
     line_one = outFile.readline()
+=======
+    file_path = "/users/burres/desktop/write_number.txt"
+    outFile = open(file_path, "w" )
+    users_digit = int(input("Enter a number: "))
+    outFile.write(str(users_digit))
+    
+
+    my_num = input("Enter a number: ")
+    
+
+  
+
+def reading_int_from_files():
+    outFile = open(r"/users/burres/desktop/write_number.txt", "r" )
+    line_one = outFile.readline() 
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     
     #users_digit = int(input("Enter a number: "))
     result = int(line_one) * 2
@@ -141,8 +164,12 @@ def read_and_write():
     
 # dealing with exceptions.  We wrap the code in a try block and then catch the error in the except block.  This is a good way to handle files.
 def read_file_with_exceptions():
+<<<<<<< HEAD
     file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
     
+=======
+    #file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     try:
         file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
         for line in file:
@@ -155,7 +182,7 @@ def loop_with_exceptions():
         try:
             user_input = int(input("Enter a number: "))
             print(f"The number you entered is {user_input}")
-            break
+            main()
         except ValueError: # you can have more than one except block
             print("You did not enter an integer number.  Try again.")
             
@@ -205,10 +232,16 @@ def main():
     #skipping_line_space()
     #pass_file()
     #read_and_write()
+<<<<<<< HEAD
     #write_line(sentence_1)
     #read_file_with_exceptions()
     #loop_with_exceptions()
     #using_finaly()
+=======
+    read_file_with_exceptions()
+    loop_with_exceptions()
+    using_finaly()
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     #users_line()
     #infinite_loop()
    

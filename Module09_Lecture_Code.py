@@ -26,8 +26,12 @@ import json
 
 #We use a list to pair each grade with the key (which is each student's name)
 
+<<<<<<< HEAD
 grade_book = {'Gina': [100, 90, 10], 'Tina': [45, 50, 48], 'Rob': [78, 84, 82], 'Jake': {'Sub-grades': [0, 1, 2]}, 10: 'Mustang'}
 simple_dictionary = {'JK Rowling': ["Harry Potter and the Sorcers Stone", "Chamber of Secrets"], "J.R.R. Tolkein": "Lord of the Rings"}
+=======
+grade_book = {'Gina': [100, 90, 10, [90, 80, 100 ]], 'Tina': [45, 50, 48], 'Rob': [78, 84, 82], 'Jake': {'Sub-grades': [0, 1, 2]}, 10: 'Mustang'}
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
 
 #FINDING A VALUE IN A DICTIONARY 
 student_name = input("Enter the students name to see their respective grades: ")
@@ -49,6 +53,7 @@ if student_name in grade_book:
     grade_change = int(input("Which grade do you want to change? "))
     grade_change = grade_change - 1
     new_value = int(input("Enter the new grade: "))
+    
     
     for key in grade_book:
         #remember, it follows key:value pairs, so we reference the key then the value as grade_change
@@ -81,7 +86,8 @@ file.close()
 
 #----------------------------------------------------------------------------------------------------
 
-phonebook = {'Karl': '555-9832', 'Tim': '754-3220', 'Nelly': '954-8774'}
+
+phonebook = {'Karl': '555-9832','Tim': '754-3220', 'Nelly': '954-8774', 'Todd': 12345, 'Karl_1': '555-9830'}
 print(phonebook)
 
 #ADDING AN ELEMENT TO THE DICTIONARY
@@ -93,7 +99,8 @@ print(phonebook)
 
 #DELETING A KEY:VALUE PAIR
 del phonebook['Terrence']
-print(phonebook)
+print(*phonebook)
+print(phonebook['Karl'])
 
 #GETTING THE NUMBER OF ITEMS IN A DICTIONARY USING LEN
 length = len(phonebook)
@@ -117,7 +124,7 @@ phonebook.clear()
 print(phonebook)
 
 #USING THE GET() METHOD.  This takes the key and a default statement if it's not found
-number1 = phonebook.get('Karl', 'number not found')
+number1 = phonebook.get('Phil', 'number not found')
 print(number1)
 
 phonebook = {'Johnny': '999-9999'}
@@ -158,7 +165,11 @@ squares = {item:item**2 for item in numbers}
 print(squares)
 '''
 #LOOK AT PAGE 492, Using if Clauses
+<<<<<<< HEAD
 
+=======
+'''
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
 #-------------------------------------------------------------------------------
 
 #SETS
@@ -184,6 +195,14 @@ print(length2)
 myListSet.update([9, 6, 10, 'b'], [0, 10])
 print(myListSet)
 
+<<<<<<< HEAD
+=======
+my_dictionary = {3: 5, 'Tim': 6, 'Sam': 10}
+new_set = set(my_dictionary)
+print(new_set)
+new_set.update({"Bill": "Ted"})
+print(new_set)
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
 
 myListSet.remove(10)  #also .discard()
 print(myListSet)
@@ -218,5 +237,5 @@ print(set5a)
 set6 = set2.symmetric_difference(set1)
 print(set6)
 
-
-
+result = sorted(set6)
+print(result)

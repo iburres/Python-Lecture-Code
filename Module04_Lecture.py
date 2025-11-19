@@ -6,7 +6,7 @@ Date: 9/20/2021
 
 '''
 import random
-import statistics
+#import statistics
 import math
 import os   #operating system
 #import pandas as pd
@@ -42,9 +42,9 @@ for var in range(101):
 #    squared = num * num
 #    print(squared)
 #start = int(input("What number should i start at: "))
-#test/end = int(input("What number should we exit the loop: "))
+#end = int(input("What number should we exit the loop: "))
 #increment/decrement = int(input("What number should we increment or decrement by:  "))
-#for i in range(start, end, increment):
+#for i in range(start, end , 2):
 #    print(i)
 
 # Example 1:
@@ -55,13 +55,18 @@ if choice.lower() == "yes":
     user_choice = int(input("How many times should my loop run? "))
 
     # user-controlled for loop
+<<<<<<< HEAD
     
     for i in range(0, user_choice, 1):  #(start, end, increment/decrement)
+=======
+    #user_choice = 7
+    for i in range(0, user_choice + 1, 1):  #(start, end, increment/decrement)
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
         print(f"Welcome to my game. This is loop number: {i}")
 
-for i in range(1, 11):
+for i in range(1, 3):
     #do something here 11 times
-     #placeholder for code to be added later
+    #placeholder for code to be added later
     pass
 
 n = int(input("Enter a number: "))
@@ -72,16 +77,34 @@ while n < 20:
 
 while(choice.lower() == "yes"):
     print("Welcome to my game.")
+    
     users_number = int(input("Guess a number from 1 - 100:  "))
     if(users_number != rand_number):
         print("That is not the same number")
-        choice = input("Do you want to play again? ")
+        
     else:
         print(f"That is the same number {rand_number}")
+        #choice = input("Do you want to play again? ")
         break
+    choice = input("Do you want to play again? ") 
+       # break
 #    loop -= 1
     # 40 lines of code
+shots_made = 0
+for shots in range(1, 101):
+    _3_pointers = random.randint(0, 100)
+    if _3_pointers >= 0 and _3_pointers <=30:
+        shots_made += 1
+
+print(shots_made)
     
+while shots_made <= 100:
+    _3_pointers = random.randint(0, 100)
+    if _3_pointers >= 0 and _3_pointers <=30:
+        shots_made += 1
+        
+print(shots_made)
+         
 
 #print("Goodbye")
 #number_made = random.randint(0,101)
@@ -89,7 +112,14 @@ while(choice.lower() == "yes"):
 #    pass
 
 my_boolean = True
+<<<<<<< HEAD
 while my_boolean:
+=======
+
+
+
+while True:
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     choice = input("Do you want to play a game? ")
     if(choice.lower() == "no"):
         print("Goodbye again")
@@ -98,22 +128,24 @@ while my_boolean:
     else:
         continue
 
-      
+my_list = [-2, 4, 0, 8, 1]
 
+#bubble sort     
+my_list.sort()
 #Nested Loops.  A loop within a loop.  When i is 0 the inner loop will run 9 times.  When i is 1 the inner loop will run 9 times.  When i is 2 the inner loop will run 9 times.  When i is 3 the inner loop will run 9 times.  4 * 9 = 36.  Total number of iterations.
-for i in range(0, 4): #outer loop. 
+for i in range(0, 100): #outer loop. 
     print(f"The value of i is: {i}")
-    for j in range(1, 10): #inner loop.  
+    for j in range(1, 100): #inner loop.  
         print(f"The value of j is: {j} \n")
-        for k in range(10, 20):
+        for k in range(10, 200):
             print(k)
             
 for outer in range(0, 4):
-    print(outer)
+    print(f"outer value: {outer}")
     for inner in range(0, 4):
-        print(inner)
+        print(f"inner value: {inner}")
         for inner_inner in range(0, 4):
-            print(inner_inner)
+            print(f"inner_inner value: {inner_inner}")
             
             
         
@@ -127,9 +159,10 @@ movie_title = "The Last of the Mohicans"
 
 for letter in movie_title:
     print(letter)
-    
+
 length = len(movie_title)
 print(length)
+
 
 
 

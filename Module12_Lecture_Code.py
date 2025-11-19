@@ -9,16 +9,24 @@
         
         Recursion is often used to solve problems that can be broken down into smaller, repetitive problems.
         
-        Recursion can be slow and use a lot of memory, so it is not always the best solution. (Iterative solutions are often faster and use less memory.)
+        Recursion "can" be slow and typically uses more memory (due to the overhead of maintaining the stack), so it is not always the best solution. (Iterative solutions are often faster and typically use less memory.)
         
         Recursion uses a base case to stop the recursion.
         
         Recursion uses the call stack to keep track of function calls.
         
 '''
+<<<<<<< HEAD
 
 
 
+=======
+def fibonacci(n):
+    if n <= 2:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
 
 #4! = 4 * 3 * 2 * 1 = 24
 
@@ -55,6 +63,16 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n - 1) # Recursive call, meaning the function calls itself.
+    
+#To compare and contrast, here is the iterative solution:   
+'''
+def factorial(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+        
+'''
 
 # Given an integer n, return true if it is a power of two. Otherwise, return false. An integer n is a power of two, if there exists an integer x such that n == 2x.
 
@@ -76,6 +94,7 @@ def isPowerOfTwo(n):
 # isPowerOfTwo(0) -> False
 
 
+<<<<<<< HEAD
 '''
 1_  2_  3_   _5  _8  13_  _21  34_  _55  89_ 
 1   2    3   4    5  6    7    8    9    10
@@ -84,11 +103,33 @@ def isPowerOfTwo(n):
 def fibonacci(n):
     if n <= 2:
         return n
+=======
+# This function demonstrates the use of dynamic programming to solve the Fibonacci sequence. The difference between this function and the previous one is that this function uses a list to store the values of the Fibonacci sequence as they are calculated, which allows the result to be retrieved in constant time. This is an example of memoization, which is a technique used to store the results of expensive function calls so that they can be retrieved later without having to recalculate them.
+cons_mem_ret = []   
+def dyn_fibonacci(n):
+    if n in cons_mem_ret:
+        return cons_mem_ret[n]
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+        if n <= 2:
+            return n
+        else:
+            cons_mem_ret[n] = dyn_fibonacci(n - 1) + dyn_fibonacci(n - 2)
+            return cons_mem_ret[n]
+    
+    
   
 if __name__ == "__main__":
+<<<<<<< HEAD
     #print(factorial(4))
     print(isPowerOfTwo(17))
     #print(fibonacci(10))
   
+=======
+    #print(fibonacci(6))
+    print(factorial(5))
+    #print(isPowerOfTwo(8))
+    #print(dyn_fibonacci(6))
+    
+   
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b

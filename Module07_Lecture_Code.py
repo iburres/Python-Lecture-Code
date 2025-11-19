@@ -5,10 +5,20 @@ Module 7 Lecture Code
 '''
 #Lists"   
 
+<<<<<<< HEAD
 my_list = [9, 8, 12, 0, -6, 12, 15] #indexes are from 0 to N - 1    7 elements, equals 0-6 indexing
 my_text_list = ["Orange is the color of an orange", "Bananas", "Fruits"]  
 my_combo_list = ["8Orange", 8, 3.45, "/users/burres/desktop/texst.txt"]  
 my_tuple = (4, 5, 8, 9) #tuples are the same
+=======
+#Lists
+GRAVITY = 9.8
+
+my_list = [9, 8, 12, 0, -4, 12, 15] #indexes are from 0 to N - 1
+my_text_list = ["Orange is the color of an orange", "Bananas", "Fruits"]
+my_combo_list = ["8Orange", 8, 3.45, "/users/burres/desktop/texst.txt", [0, 1], [1, [ ], 8 ]]
+my_tuple = (4, 5, 8, 9, GRAVITY) #tuples are the same
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
 empty_list = []
 my_var = 55
 list_within_a_list = [1,3,5, [0, 5, 6], [], "Hello", ("R", "E", "D"), my_var]
@@ -32,10 +42,14 @@ print(my_combo_list.index(3.45))
 voter_list = ["John", "Sally", "Mike", "Terrence", "Sophia", "Sandheep", "Terrence"]
 voter_choice = ['Republican', 'Democrat', 'Republican', 'Democrat', 'Republican', 'Democrat', 'Independent']
 
-for elem in voter_list:
-    if elem == "Terrence":
-        location = voter_list.index(elem)
-        empty_list.append(location)
+length = len(voter_list)
+start = 0
+while start < length:
+    for elem in voter_list:
+        if elem == "Terrence":
+            location = voter_list.index(elem)
+            empty_list.append(location)
+    start += 1
         
 print(empty_list)
 

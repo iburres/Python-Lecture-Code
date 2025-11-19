@@ -9,7 +9,7 @@ Module 8 - Lecture Code
 
 #I love programming 99. That's a 1 number 0
 
-'''
+
 #searching for a value in the string
 letters = "owjefoiaAIFoefooewfj"
 char = input("What letter would you like to search for? ")
@@ -44,7 +44,7 @@ print(f"{numbers}{letters}")
 letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 #slicing strings
 first_half = letters[0:13] 
-second_half = letters[13:]
+second_half = letters[13:27]
 print(first_half, second_half)
 
 
@@ -85,7 +85,6 @@ print(result)
 
 result2 = letters.upper()
 print(result2)
-'''
 
 #string testing methods
 #import random 
@@ -99,6 +98,7 @@ def isSpecial(passPhrase):
             return True
         else:
             continue
+<<<<<<< HEAD
                      
 phrase = "Why can't you determine decimals Python?"
 empty_list = []
@@ -115,37 +115,47 @@ for char in users_number:
     if char.isnumeric and char != ".":
         print("The string is a decimal value")
         
+=======
+                    
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     
 def menu():
-    user_choice = input("Please enter a passphrase: ")
-    length = len(user_choice)
-    #user_choice = isSpecial(phrase)
+    passPhrase = input("Please enter a passphrase: ")
+    length = len(passPhrase)
     if length >= 8:
         print("The password has the correct length")
+<<<<<<< HEAD
         
     #if (user_choice.isalpha and user_choice.isdigit):
     #    print("The value is both alpha and numeric")
     if user_choice.isspace():
         print("The string has whitespace")
     if user_choice.isalnum():
+=======
+    if passPhrase.isalnum(): 
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
         print("The string is alphanumeric")
-
-    if user_choice.isdigit():
+        
+    if passPhrase.isdigit(): 
         print("The string contains only numbers")
         
+<<<<<<< HEAD
     if user_choice.isnumeric():
         print("The string is numeric")
         
     if user_choice.isalpha():
+=======
+    if passPhrase.isalpha(): 
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
         print("The string contains only letters")
         
-    if user_choice.islower():
+    if passPhrase.islower(): 
         print("the string contains only lowercase letters")
         
-    if user_choice.isupper():
-        
+    if passPhrase.isupper():
         print("The string has all upper case letters")
     
+<<<<<<< HEAD
     if isinstance(user_choice, float):
         print("The string is a decimal")
         
@@ -182,6 +192,10 @@ def separateWords():
         
     
     
+=======
+    if (isSpecial(passPhrase)):
+        print("The string also contains a special character and is alphanumeric")
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
         
 if __name__ == "__main__":
     #menu()

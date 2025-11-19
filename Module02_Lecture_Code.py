@@ -54,12 +54,17 @@ result = _num + _num_1
 
 hello_var_3 = 88
 
+
 #integers
 num_of_students = 40
 median_age = 24
 big_number = 78939449875345 # don't use commas, or it will think they are multiple values
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
 #floating point values (floats)
 average_age = 23.456
 interest_rate = 4.35567 # floating point values have 32-bit representation
@@ -76,7 +81,7 @@ result = num_1 + num_2 # this line adds the two numbers on the right and then st
 my_string = "789 Happy Days" 
 my_num = 45
 # The line of code below will cause an error. Go ahead and remove the # on line 45 to see this for yourself
-# mush_together = my_string + my_num
+#mush_together = my_string + my_num
 
 #correct way to concatenate
 mush_together = my_string + str(my_num) # this is called type-conversion or casting. 
@@ -93,12 +98,12 @@ first_name = input("Please enter your first name: ") # try using your name then 
 print("Hello", first_name, "it's nice to meet you")
 
 #input using integers and floats
-year_born = int(input("What year were you born? "))
+year_born = int(input("What year were you born? Please enter a integer, not letters. "))
 percentage = float(input("What is the percentage, in decimal, of students who will stop programming after this course? "))
 
 print(percentage * 100, "%")
 
-my_num = 50
+my_num = 50.4567
 my_name = "Alice"
 
 print(f"Hello {my_name}, you are {my_num} years old")
@@ -131,9 +136,12 @@ print(r"Users/burres/Python-Lectures/Python-Lecture-Code/Module02_Lecture_Code.p
 # %d - integer
 # %f - float
 # %x - hexadecimal
+# %b - binary
+# %o - octal
+# %x - hexadecimal [0-9, A-F]
 print("Hello %s, you are %d years old" % (my_name, my_num))
 print("Hello %s, you are %f years old" % (my_name, my_num))
-print("Hello %s, you are %x years old" % (my_name, my_num))
+#print("Hello %s, you are %x years old" % (my_name, my_num))
 
 
 

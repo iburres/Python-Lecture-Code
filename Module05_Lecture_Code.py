@@ -16,9 +16,17 @@ PHRASE = "Hello, World!" # This is a constant. The value of a constant cannot be
 
 counter = 0
 
+def random_num_generator():
+    rand_number = random.randint(0, 100) #generates a random number between 0 and 100
+    print(rand_number)
+    result = pow(2, 3)
+    print(result + my_global)
+
 def playing_with_constants():
     #global PI # NEVER EVER EVER DO THIS. This is a bad practice. It is better to declare the constant as a global variable at the top of the module.
     #PI = 2.14
+    result = 0
+    print(result)
     print(PI)
     print(PHRASE)
     print(PI)
@@ -26,6 +34,7 @@ def playing_with_constants():
     
 def local_constant():
     #global PI
+    
     PI = 2.14
     print(PI)
     print(PHRASE)
@@ -93,7 +102,7 @@ def gui():
     num_of_characters = 0
     if(operation == 1):
         num = int(input("Enter a number from 1 - 10: "))
-        add_return = addition(num)
+        add_return = addition(4, num, 7)
         print(add_return)
     if(operation == 2):
         subtraction()
@@ -112,7 +121,12 @@ def gui():
 
 # The forwared slash in the parameter field makes the parameters positional only
 def positional_arguments(a, b, c):
-    print(a, b, c)
+    x = a + 4
+    y = b + 5
+    z = c
+    
+    j = a + x
+    print(x, y, z)
     
 
 # The asterisk in the parameter field makes the parameters keyword only
@@ -139,6 +153,7 @@ def keyword_arguments(**kwargs):
 # assigning values to the parameters in the function definition
 def default_arguments(a = 1, b = 2, c = 3):
     print(a, b, c)
+    change_global_without_keyword()
 
       
 def change_global():
@@ -155,7 +170,10 @@ def try_to_change_constant():
     print(PI)
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
 if __name__ == "__main__":  
     #x = int(input("Enter a number: "))
     #y = int(input("Enter another number: "))
@@ -167,9 +185,13 @@ if __name__ == "__main__":
     gui()
     #playing_with_constants()
     local_constant()
-    positional_arguments(1, 2, 3)
+    user_value = input("Enter a letter: ")
+    t = 99
+    positional_arguments(1, user_value, 3)
+    positional_arguments(1)
+    positional_arguments(1,2,3,4)
     keyword_arguments(a = 1, b = 2, c = 3) # keyword arguments must be used when calling the function. A keyword argument is a name-value pair that you pass to a function.
-    compute(7)
+    #compute(7)
     changed_order(c = 3, a = 1, b = 2)
     keyword_arguments(name = "John", age = 25, city = "New York")
     total = function_as_argument(addition, x=5, y=6)

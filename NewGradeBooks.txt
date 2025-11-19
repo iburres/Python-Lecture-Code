@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 Gina:[100, 90, 10]
 Tina:[0, 50, 48]
 Rob:[78, 84, 82]
 Jake:{'Sub-grades': [0, 1, 2]}
 10:Mustang
 {"Gina": [100, 90, 10], "Tina": [0, 50, 48], "Rob": [78, 84, 82], "Jake": {"Sub-grades": [0, 1, 2]}, "10": "Mustang"}
+=======
+Gina:[0, 90, 10, [90, 80, 100]]
+Tina:[45, 50, 48]
+Rob:[78, 84, 82]
+Jake:{'Sub-grades': [0, 1, 2]}
+10:Mustang
+{"Gina": [0, 90, 10, [90, 80, 100]], "Tina": [45, 50, 48], "Rob": [78, 84, 82], "Jake": {"Sub-grades": [0, 1, 2]}, "10": "Mustang"}
+>>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
