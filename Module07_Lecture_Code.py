@@ -2,20 +2,35 @@
 Module 7 Lecture Code
 
 '''
+'''
+#Lists"   
 
-#Lists
-
-
-my_list = [9, 8, 12, 0, -4, 12, 15] #indexes are from 0 to N - 1
-my_text_list = ["Orange is the color of an orange", "Bananas", "Fruits"]
-my_combo_list = ["8Orange", 8, 3.45, "/users/burres/desktop/texst.txt"]
+my_list = [9, 8, 12, 0, -6, 12, 15] #indexes are from 0 to N - 1    7 elements, equals 0-6 indexing
+my_text_list = ["Orange is the color of an orange", "Bananas", "Fruits"]  
+my_combo_list = ["8Orange", 8, 3.45, "/users/burres/desktop/texst.txt"]  
 my_tuple = (4, 5, 8, 9) #tuples are the same
 empty_list = []
+my_var = 55
+list_within_a_list = [1,3,5, [0, 5, 6], [], "Hello", ("R", "E", "D"), my_var]
+
+length = len(my_list)
+users_num = int(input("Which index do you want to see? "))
+if users_num > length - 1:
+    print("That index does not exist")
+else:
+    print(my_list[users_num])
+
+my_list.append(21)
+print(my_list)
+
+print(my_combo_list)
 
 print(my_list[4])
+print(my_combo_list[2])
+print(my_combo_list.index(3.45))
 
 voter_list = ["John", "Sally", "Mike", "Terrence", "Sophia", "Sandheep", "Terrence"]
-voter_choice = ['Republican', 'Democrat', 'Republican', 'Democrat', 'Republican', 'Democrat']
+voter_choice = ['Republican', 'Democrat', 'Republican', 'Democrat', 'Republican', 'Democrat', 'Independent']
 
 for elem in voter_list:
     if elem == "Terrence":
@@ -54,12 +69,16 @@ total_occurences = []
 
 for elem in elias_question:
     if "Cars" in elias_question:
-        total_occurences.append(elem)
+        index = elias_question.index("Cars")
+        total_occurences.append(index)
+        break
+    else:
+        continue
         
 
+print(f"--------------------- {total_occurences}")
 
-
-#my_list.append(6)
+my_list.append(6)
 
 print(my_list)
 
@@ -81,19 +100,34 @@ while True:
     except ValueError:
         print("That element is not in the list")
         
+        
+        
+        
+        
+        7  
+        11
+        15
+        -0
+        44
+        
+        
 
 
-result = my_list.pop(3) #removes and returns value if we store it in a variable
+result = my_list.pop(3) #removes and returns value if we store it in a variable  
 
 print(my_list)
 print(result)
 
 
-del my_list # will delete the whole list
+#slicing
+sliced_list = []
+sliced_list = my_list[4:8]
+
+#del my_list # will delete the whole list
 del my_list[3:5] # delete a slice of the list
 
 
-#print(my_list)
+print(my_list)
 
 this_is_a_list = "I love Python"
 
@@ -136,16 +170,16 @@ grade_book[2] = 100
 
 
 
-'''
+
 index = grade_book.index("troubador")
 print(index)
 
 grade_book[index] = 75
 #print(grade_book)
 
+'''
 
-
-PART 2
+#PART 2
 
 
 
@@ -229,15 +263,6 @@ print(final_list.count("Ted"))
 #Student coding in class program
 #   .isalpha()   .isdigit()
 
-Using my_combo_list = ["Orange", 8, 3, 10, "Sam", -2,"Cars"]
-extract the strings from the list and sort them.  Print the new list to stdout
-
-
-
-
-
-
-
 
 
 
@@ -256,6 +281,7 @@ for item in temp_list:
 print(string_list)
 print(sorted(string_list))
 
+
 #This can also be done with type, which is much faster code
 last_list = [] 
 last_list = [x for x in my_combo_list if type(x)==int]
@@ -271,6 +297,6 @@ new_list = []
 for i in range(0, len(second_list)):
     new_list.append(first_list[i] + second_list[i])
 print(new_list)
-'''
+
 
         

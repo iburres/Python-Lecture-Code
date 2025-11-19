@@ -33,6 +33,7 @@
         
         and many more...
 '''
+# (210)555-5555
 import re
 
 def regex_email(input_email):
@@ -49,7 +50,7 @@ def regex_phone(input_phone):
         Function to validate a phone number
     '''
     import re
-    if re.search(r'^\(?[0-9]{3}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}$', input_phone):
+    if re.search(r'^\(?[0-9]{3}\)?[0-9]{3}[-.]?[0-9]{4}$', input_phone):
         return True
     return False
 
@@ -94,10 +95,11 @@ def using_match():
     '''
     # match checks for a match only at the beginning of the string
     import re
-    string = 'The quick brown fox jumps over the lazy dog'
+    string = 'Any quick brown fox jumps over the lazy dog'
     regex = r'\b\w{3}\b'
     result = re.match(regex, string)# match returns None if the regex is not found at the beginning of the string and returns the match if it is found based on the index
     print(result)
+   
     
 #findall() - returns a list containing all matches
 def using_findall():
@@ -105,17 +107,17 @@ def using_findall():
         Function to use findall
     '''
     import re
-    string = 'The quick brown fox jumps over the lazy dog'
+    string = 'the quick brown fox jumps over the lazy dog'
     regex = r'\b\w{3}\b'
     result = re.findall(regex, string)
     print(result)
 
-def using_sub():
-    import re
+#def using_sub():
+#    import re
 
-    txt = "The rain in Spain"
-    x = re.sub("\s", "9", txt)# replace all the whitespaces with 9
-    print(x)  
+#    txt = "The rain in Spain"
+#    x = re.sub("\s", "9", txt)# replace all the whitespaces with 9
+#    print(x)  
     
 # forward looking assertion. 
 def forward_looking_assertion():
@@ -151,16 +153,19 @@ def not_in_string():
     
 
 if __name__ == '__main__':
-    print(regex_email('99@utsa.edu'))
-    print(regex_phone('(210)-45S-4433'))
-    print(zero_or_more(''))
-    print(abc123('tty677'))
-    using_split("Hello World of Python")
-    find_regex()
-    using_match()
-    using_findall()
-    using_sub()
-    forward_looking_assertion()
-    forward_looking_with_no_match()
-    not_in_string()
+    #print(regex_email('_@utsa.edu'))
+    print(regex_phone('(555)555-5555'))
+    number = input("Enter your phone number: ")
+    result = regex_phone(number)
+    print(result)
+    #print(zero_or_more('c'))
+    #print(abc123('tty677'))
+    #using_split("Hello World of Python")
+    #find_regex()
+    #using_match()
+    #using_findall()
+    #using_sub()
+    #forward_looking_assertion()
+    #forward_looking_with_no_match()
+    #not_in_string()
     

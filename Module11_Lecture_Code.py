@@ -25,11 +25,15 @@
 # Encapsulation:  The object encapsulates the attributes and methods derived from the class.  
 # Abstraction: Not needing to know how the internal structure of a program works but still being able to use the program.  From a programmers perpescrtive, it means having access to 
 # the APIs (methods) 
-# Inheritance:  Animal -> Dog, Lian, Cat -> house cat, field cat
-# Polymorphism:    
+# Inheritance:  Animal -> Dog, Lion, Cat -> house cat, field cat
+# Polymorphism:  
+
+  
 
 # Example:
 class Animal:
+    
+    
     def __init__(self, name, age):
         self.name = name #public or non-hidden attribute
         self.age = age
@@ -45,6 +49,11 @@ class Dog(Animal): #subclass inherits from superclass
     #overriding
     def speak(self):
         print(f'{self.name} is a {self.breed} and is barking')
+        
+
+class Dobberman(Dog):
+    pass
+    
         
     
         
@@ -94,28 +103,30 @@ class Car(Vehicle):
         
 if __name__ == '__main__':
     
+    human_name = input("Enter a human name: ")
     animal_type = input('Enter the type of animal: ')
     animals_age = int(input('Enter the age of the animal: '))
     
-    animal = Animal(animal_type, animals_age)
-    animal.speak()
+    human = Animal(human_name, animals_age)
+    human.speak()
     
     #creating an object from the no-argument constructor
     #animal = Animal()
     
-    dog = Dog('Killer', 5, 'German Shepherd')
+    dog = Dog('Killer', 5, "German Shepard")
     dog.speak()
     
     #creating an object of the Car class
     vehicle = Vehicle('Ford', 'F-250', 2021) #try putting a 4 here and you'll see the error code that is generated.
     vehicle.display_info()
     car = Car('Toyota', 'Corolla', 2015, 4)
-    #car.display_info()
+    car.display_info()
     car.setMake('Honda') # this will change the make of the car
     print(car)
     print(car.doors)
-    #car.__make = "Honda"
-    #car.display_info()
+    car.__make = "Mitsubishi"
+    print(car.__make)
+    car.display_info()
     
     #multiple inheritance means a class can inherit from more than one class. There is no limit on the number of classes a class can inherit from.
     

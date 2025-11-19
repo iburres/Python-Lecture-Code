@@ -39,10 +39,10 @@ def increment():
     print(counter)
 
 #This function accepts a single argument in its parameter field and adds that number with a declared integer
-def addition(num_1, num_2):
+def addition(num_1):
     #a = 4
-    #x = 5
-    total = num_1 + num_2 - my_global # The global variable my_global is used in the function now.
+    x = 5
+    total = num_1 + x - my_global # The global variable my_global is used in the function now.
     #multiplication(total)
     return total 
 
@@ -153,6 +153,8 @@ def change_global_without_keyword():
 def try_to_change_constant():
     PI = 2.7 # This will work because Python does not support true constants. 
     print(PI)
+
+
 
 if __name__ == "__main__":  
     #x = int(input("Enter a number: "))

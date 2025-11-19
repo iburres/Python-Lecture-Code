@@ -4,13 +4,13 @@
 
 Module 06 Lecture Code
 
-r = read
-w = write
-a = append
+r = read      
+w = write   
+a = append  
 r+ = read and write
 w+ = write and read
 a+ = append and read
-rb = read binary
+rb = read binary      
 wb = write binary
 ab = append binary
 rb+ = read and write binary
@@ -27,7 +27,7 @@ import random
 #Opening a file in sequential mode and reading line by line.
 def read_files_by_line():
     
-    file = open('/users/burres/desktop/Test.txt', 'r') # in windows, since you have a backslash, you need to use a raw string.  r'c:\users\burres\desktop\Test.txt' or two backslashes 'c:\\users\\burres\\desktop\\Test.txt'
+    file = open("C:\\Users\\iburr\\OneDrive\\Desktop\\test.txt", 'r') # in windows, since you have a backslash, you need to use a raw string.  r'c:\users\burres\desktop\Test.txt' or two backslashes 'c:\\users\\burres\\desktop\\Test.txt'
     
     line_one = file.readline()
     print(f'{line_one}')
@@ -45,12 +45,12 @@ def read_files_by_line():
     if "a" in line_one:
         # count the number of times the letter a appears in the first line
         count = line_one.count("a")
-        print(f"The letter a appears: {count} times in the first line")
+        print(f"The letter a appears: {count} times in the first line \n")
 
    
 #opening a file and reading all of it's contents at once
 def read_whole_file():
-    file = open(r'/users/burres/desktop/Test.txt', 'r')
+    file = open(r'C:\Users\iburr\OneDrive\Desktop\test.txt', 'r')
     
     contents = file.read()
     print(contents)
@@ -60,7 +60,7 @@ def read_whole_file():
 #writing to a file that does not exist.  Essentially creating a new file    
 def write_to_new_file():
     
-    file = open(r"/users/burres/desktop/newFile.txt", "w")
+    file = open(r"C:\Users\iburr\OneDrive\Desktop\newTest.txt", "w")
 
 
     file.write("Look at me, I can create a file and write to it at the same time.\n")     
@@ -79,7 +79,7 @@ def another():
 #adding data to a file that does exist    
 def append_to_file():
     
-    file = open(r"/users/burres/desktop/newFile.txt", "a")
+    file = open(r"C:\Users\iburr\OneDrive\Desktop\newTest.txt", "a")
     
     file.write("\nAnd now I can add to the file without overwriting it!")     
     
@@ -197,9 +197,9 @@ def infinite_loop():
 def main():
     #read_files_by_line()
     #read_whole_file()
-    #write_to_new_file()
+    write_to_new_file()
     #another()
-    #append_to_file()
+    append_to_file()
     #writing_integers_to_files()
     #reading_int_from_files()
     #skipping_line_space()
@@ -210,8 +210,8 @@ def main():
     #loop_with_exceptions()
     #using_finaly()
     #users_line()
-    infinite_loop()
-    pass
+    #infinite_loop()
+   
 
 if __name__ == "__main__":
     main()

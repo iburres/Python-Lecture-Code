@@ -1,7 +1,7 @@
 '''
     Module 03 Lecture Code: Decision Structures
 '''
-
+'''
 # Python decision structures
 # if, if-else, if-elif-else.  Boolean expressions.  Logical operators.  Nested if statements.
 
@@ -10,10 +10,10 @@
 #     <statement>    Notice the indentation
 
 
-user_choice = input("Do you want to continue? (yes/no): ", )
-
+user_choice = input("Do you want to continue? (yes/no): ", ) # YES
+    
 #.lower() converts the string to lowercase.  .upper() converts the string to uppercase
-if (user_choice.lower() == "yes"): # .lower() converts the string to lowercase 
+if (user_choice.lower() == "yes"): # .lower() converts the string to lowercase   
     print("You chose to continue.")
     print("This statement belongs to parent if statement")
     # belongs to paren if statement 
@@ -24,7 +24,7 @@ print("This statement does not belong to parent if statement")
   
 
 # if-else statement
-if user_choice == "no":
+if user_choice == "no": 
     
     print("You chose to stop.")
     
@@ -43,18 +43,21 @@ elif rand_num < 5:
 elif rand_num == 4:
     print("The number is 4.")
 else:
-    print("The number is 5.")
+    print("The number is 5.")   
+    
 
 #nested if statements 
 if rand_num > 5:
     print("The number is between 5 and 10.")
     if rand_num > 7:
         print("The number is greater than 7.")  
-        if rand_num == 8:
+        if rand_num == 4:
             print("The number is 8.")
 else:
-    print("The number is less than 5.")\
+    print("The number is less than 5.")
+    
 
+    
         
 # logical operators
 # and, or, not
@@ -69,21 +72,38 @@ else:
 # F or T = T    I am 4 feet tall or I am 45 years old
 # F or F = F    I am 4 feet tall or I am 4 years old
 
+# 1 && 1 = 1
+# 1 && 0 = 0 
+# 0 && 1 = 0
+# 0 && 0 = 0
 
-counter = 0
+#short-circuit 
+choice = input("Do you want to play a game? ")
+my_num = int(input("Enter a number between 0 - 10: "))
+
+if (choice == "yes" and my_num >= 4): # F 
+    print("You want to play the game")
+
+new_num = int(input("Enter a number from 0 - 250: "))
+    #
+
+# counter / accumulator
+counter = 0  
 # Now let's use the logical operators in our if statements
 age = int(input("Enter your age: "))
-height = float(input("Enter your height in feet: "))
-choice = "awesome"
-if age > 12 and age < 65 and choice == "awesome":
-    print("You are tall and old enough to ride the roller coaster.")
+height = float(input("Enter your height in feet: ")) 
+choice = "bad"
+if age >= 12 and age <= 65 and new_num == 21:
+    print("Happy 21st birthday")
     counter += 1   # counter = counter + 1
 else:
     print("You are not tall enough or old enough to ride the roller coaster.")
 
 # You try it using the OR operator
+'''
 
-riddle_1 = "Heavenly"
+counter = 0
+riddle_1 = "Heaven"
 riddle_2 = "A map"
 riddle_3 = "A candle"
 
@@ -91,9 +111,10 @@ answer_1 = input("What is the answer to the riddle: Song by Brian Adams")
 answer_2 = input("What is the answer to a anolog directional paper device")
 answer_3 = input("What is the answer to a anolog light source pre-dating electricity")
 
+GRAVITY = 9.8
+print(GRAVITY)
 
-
-if answer_1 == "Heavenly":
+if answer_1 == riddle_1:
     print("You are correct!")
     counter += 1
 if answer_2 == "A map":
@@ -104,5 +125,7 @@ if answer_3 == "A candle":
     counter += 1
 print("You got", counter, "correct answers.")
 print(f"You got {counter} correct answers.")
+GRAVITY = 2
+print(GRAVITY)
 
 # %n.nf  %d  %s  %f

@@ -3,15 +3,17 @@
 # A Class is a blueprint for creating objects.  Objects have attributes and methods.  We use methods to interact with the objects. 
 
 # Code reuse, modularity, security, APIs 
-# Encapsulation, Abstraction, Inheritance, Polyphorism
+# Encapsulation, Abstraction, Inheritance, Polymorphism
 
 #Object = [att1, att2, att3, method1, method2, method3]
 #House Object:  att1 = height, att2 = walls, att3 = foundation, att4 = doors, att5 = windows / methods = open_door(), close_door(), paint_walls()
 
+car = "Mustang"
+
 # Person Class
 class Person:
     # Constructor (the __init__ is called a dunder method)
-    def __init__(self, name, age):
+    def __init__(self, name, age): 
         self.name = name
         self.age = age
     # the self parameter is a reference to the current instance of the class, and is used to access variables that belong to the class.  It does not have to be named self, you can call it whatever you want, but it is standard to use self.
@@ -84,10 +86,11 @@ if __name__ == "__main__":
     # Create an object of the Person class
     person1 = Person("Alice", 25) #instantiate the object
     person1.say_hello()
-    print(person1)
+    print(person1.name)
 
     person2 = Person("Bob", 30)
     person2.say_hello()
+    print(person2.name)
 
     person3 = Person("Charlie", 35)
     person3.say_hello()

@@ -6,18 +6,28 @@ Module 9 - Dictionaries
 
 @author: iburr
 """
+morse_code = {'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.',
+              'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---',
+              'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---',
+              'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-',
+              'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 'Y': '-.--',
+              'Z': '--..', '1': '.----', '2': '..---', '3': '...--',
+              '4': '....-', '5': '.....', '6': '-....', '7': '--...',
+              '8': '---..', '9': '----.', '0': '-----', ', ': '--..--',
+              '.': '.-.-.-', '?': '..--..', '/': '-..-.', '-': '-....-',
+              '(': '-.--.', ')': '-.--.-'}
 
 
-'''
 #we will use this import to write dictionaries to files
 import json
-
+'''
 
 #Here is the gradebook expressed concisely as a dictionary
 
 #We use a list to pair each grade with the key (which is each student's name)
 
 grade_book = {'Gina': [100, 90, 10], 'Tina': [45, 50, 48], 'Rob': [78, 84, 82], 'Jake': {'Sub-grades': [0, 1, 2]}, 10: 'Mustang'}
+simple_dictionary = {'JK Rowling': ["Harry Potter and the Sorcers Stone", "Chamber of Secrets"], "J.R.R. Tolkein": "Lord of the Rings"}
 
 #FINDING A VALUE IN A DICTIONARY 
 student_name = input("Enter the students name to see their respective grades: ")
@@ -111,7 +121,7 @@ number1 = phonebook.get('Karl', 'number not found')
 print(number1)
 
 phonebook = {'Johnny': '999-9999'}
-number2 = phonebook.get('John')
+number2 = phonebook.get('Johnny')
 print(number2)
 
 #PRINTING OUT ALL OF THE ITEM IN A DICTIONARY
@@ -146,11 +156,11 @@ numbers = [1,2,3,4]
 squares = {item:item**2 for item in numbers}
 
 print(squares)
-
+'''
 #LOOK AT PAGE 492, Using if Clauses
 
 #-------------------------------------------------------------------------------
-'''
+
 #SETS
 
 mySet = set()
@@ -162,8 +172,11 @@ print(myListSet)
 
 length = len(myListSet)
 print(length)
-#myListSet.add('b')
+myListSet.add('b')
 myListSet.add('a')
+myListSet.add('a')
+myListSet.add(3.4)
+myListSet.add(5.5)
 length2 = len(myListSet)
 print(myListSet)
 print(length2)
@@ -171,11 +184,16 @@ print(length2)
 myListSet.update([9, 6, 10, 'b'], [0, 10])
 print(myListSet)
 
+
 myListSet.remove(10)  #also .discard()
 print(myListSet)
-
+a_new_set = set('a')
+print(f"----------This is an empty set: {a_new_set}-------------")
 myListSet.clear() #removes everything
 
+a_new_set.clear()
+
+print(f"----------This is an empty set: {a_new_set}-------------")
 #for loops, in operator, not in operator
 #YOU WILL DO THIS
 

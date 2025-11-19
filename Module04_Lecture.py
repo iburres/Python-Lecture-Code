@@ -19,6 +19,9 @@ Random Number Generation
 rand_number = random.randint(0, 100) #generates a random number between 0 and 100
 print(rand_number)
 result = pow(2, 3)
+print(result)
+
+
 
 
 '''
@@ -26,6 +29,12 @@ result = pow(2, 3)
 Repetition Structures, For loops and While loops
 
 '''
+for var in range(101):
+    print(f"var: {var}")
+    
+
+#  for i in range(i=0, i < 101, i+1)
+
 #for-loop  (count-controlled)
 #can be programmed controlled or user controlled
 #Example of programmer controlled:
@@ -44,10 +53,10 @@ choice = input("Do you want to play a game? ")
 
 if choice.lower() == "yes":
     user_choice = int(input("How many times should my loop run? "))
-    
+
     # user-controlled for loop
     
-    for i in range(10, user_choice, -1):  #(start, end, increment/decrement)
+    for i in range(0, user_choice, 1):  #(start, end, increment/decrement)
         print(f"Welcome to my game. This is loop number: {i}")
 
 for i in range(1, 11):
@@ -79,13 +88,13 @@ while(choice.lower() == "yes"):
 #if(number_made == 100):
 #    pass
 
-#my_boolean = True
-while True:
+my_boolean = True
+while my_boolean:
     choice = input("Do you want to play a game? ")
     if(choice.lower() == "no"):
         print("Goodbye again")
-        break
-        #my_boolean = False
+        #break
+        my_boolean = False
     else:
         continue
 
@@ -212,3 +221,4 @@ else:
         print(next, end = " ")
         f = s
         s = next
+
