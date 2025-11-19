@@ -22,6 +22,12 @@
 #       Body of base class
 #   class DerivedClass(BaseClass):
 
+# Encapsulation:  The object encapsulates the attributes and methods derived from the class.  
+# Abstraction: Not needing to know how the internal structure of a program works but still being able to use the program.  From a programmers perpescrtive, it means having access to 
+# the APIs (methods) 
+# Inheritance:  Animal -> Dog, Lian, Cat -> house cat, field cat
+# Polymorphism:    
+
 # Example:
 class Animal:
     def __init__(self, name, age):
@@ -72,13 +78,18 @@ class Vehicle:
 class Car(Vehicle):
     def __init__(self, make, model, year, doors):
         super().__init__(make, model, year)
+        self.__make = make
         self.__doors = doors
+        
         
     #def __init__(self):
     #    pass
     
     def display_info(self):
         print(f'{self._Vehicle__year} {self._Vehicle__make} {self._Vehicle__model} with {self.__doors} doors')
+    
+    def is_driving(self):
+        print(f'{self.__make} is driving')
         
         
 if __name__ == '__main__':
@@ -99,9 +110,12 @@ if __name__ == '__main__':
     vehicle = Vehicle('Ford', 'F-250', 2021) #try putting a 4 here and you'll see the error code that is generated.
     vehicle.display_info()
     car = Car('Toyota', 'Corolla', 2015, 4)
-    car.display_info()
+    #car.display_info()
     car.setMake('Honda') # this will change the make of the car
-    car.display_info()
+    print(car)
+    print(car.doors)
+    #car.__make = "Honda"
+    #car.display_info()
     
     #multiple inheritance means a class can inherit from more than one class. There is no limit on the number of classes a class can inherit from.
     

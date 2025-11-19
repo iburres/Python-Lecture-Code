@@ -1,6 +1,12 @@
 #Module 10 - Introdction to Classes and Objects
 
-# A Class is a blueprint for creating objects.  Objects have attributes and methods.  We use methods to interact with the objects.  
+# A Class is a blueprint for creating objects.  Objects have attributes and methods.  We use methods to interact with the objects. 
+
+# Code reuse, modularity, security, APIs 
+# Encapsulation, Abstraction, Inheritance, Polyphorism
+
+#Object = [att1, att2, att3, method1, method2, method3]
+#House Object:  att1 = height, att2 = walls, att3 = foundation, att4 = doors, att5 = windows / methods = open_door(), close_door(), paint_walls()
 
 # Person Class
 class Person:
@@ -39,8 +45,8 @@ class Dog:
     # Accessor and mutator methods:
     
     #setters are access methods that allow us to set the value of a private field.  They are also called mutator methods.
-    def set_name(self, _name):
-        self.name = _name
+    #def set_name(self, _name):
+        #self.name = _name
 
     def set_breed(self, breed):
         self.breed = breed
@@ -76,7 +82,7 @@ class Dog:
       
 if __name__ == "__main__":
     # Create an object of the Person class
-    person1 = Person("Alice", 25)
+    person1 = Person("Alice", 25) #instantiate the object
     person1.say_hello()
     print(person1)
 
@@ -96,7 +102,9 @@ if __name__ == "__main__":
     dog0.sit()
     
     # dog1 = Dog() # this would throw an error if we did not have the overloaded constructor above. 
-    dog0.set_name("Fido")
+    dog0 = Dog("Fido" , "olden")
+    print(dog0)
+    #og0.set_name("Fido")
     dog0.set_breed("Golden Retriever")
     print(dog0.get_name())
     print(dog0.get_breed())

@@ -21,7 +21,7 @@ open() function = open a file.  You can use this to create a file with the "w" m
 close() function = close a file
 with open() as file: = Can be used to open a file and automatically close it when the block is done.  This is a good way to handle files. However, you cannot create a new file with the with statement.  The file must already exist!!!!
 
-
+'''
 import random
 
 #Opening a file in sequential mode and reading line by line.
@@ -38,6 +38,7 @@ def read_files_by_line():
     print(f'{line_three}')
 
     file.close()
+     
     
     length = len(line_one)
     print(f'The length of the first line is {length}')
@@ -87,14 +88,17 @@ def append_to_file():
 
 def writing_integers_to_files():
     #you will do this one with me
-    outFile = open(r"/users/burres/desktop/write_number.txt", "w" )
-    users_digit = int(input("Enter a number: "))
-    outFile.write(str(users_digit))
+    try:
+        outFile = open(r"c:\\users\\iburr\\documents\\write_number.txt", "w" )
+        users_digit =int(input("Enter a number: "))
+    except (ValueError):
+        print("Please enter a digit only, not a letter or special character")
+    #outFile.write(str(users_digit)) 
     pass  
   
 
 def reading_int_from_files():
-    outFile = open(r"/users/burres/desktop/write_number.txt", "r" )
+    outFile = open(r"c:\\users\\iburr\\documents\\write_number.txt", "r" )
     line_one = outFile.readline()
     
     #users_digit = int(input("Enter a number: "))
@@ -110,12 +114,13 @@ def skipping_line_space():
     with open(r'/users/burres/desktop/nurseryRhyme.txt', 'r') as file:    
         for line in file:
             if not line.isspace():
-                print(line, end='')
+                print(line, end='') 
+                
                 
 
 # passing a file to another function
 def pass_file():
-    file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
+    file = open(r'c:\\users\\iburr\\documents\\nurseryRhyme.txt', 'r')
     receive_file(file)
     file.close()
 
@@ -127,20 +132,23 @@ def receive_file(file_name):
                 
 
 def read_and_write():
-    file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r+')
+    file = open(r'c:\\users\\iburr\\documents\\nurseryRhyme.txt', 'r+')
     for line in file:
         print(line, end='')
-    file.write("\n\nThis is a new line")
+    users_info = input("Enter a word: ")
+    file.write(f"\n\n{users_info}\n")
     file.close() # Remember to close the file when you are done with it.
     
 # dealing with exceptions.  We wrap the code in a try block and then catch the error in the except block.  This is a good way to handle files.
 def read_file_with_exceptions():
+    file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
+    
     try:
         file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
         for line in file:
             print(line, end='')
     except (FileNotFoundError, IOError, OSError, PermissionError): # this is how to do multiple exceptions
-        print("File not found")
+        print("File not found")   
         
 def loop_with_exceptions():
     while True:
@@ -167,8 +175,7 @@ def users_line():
         
 # passing parameters to a function that reads a file
 def write_line(sentence):
-    
-    file = open(r'/users/burres/desktop/user_file.txt', 'w+')
+    file = open(r'c:\\users\\iburr\\documents\\nurseryRhyme.txt', 'w+')
     file.write(sentence)
     file.close()
     #with open(r'users/burres/desktop/user_file.txt', 'w') as file:
@@ -196,15 +203,15 @@ def main():
     #writing_integers_to_files()
     #reading_int_from_files()
     #skipping_line_space()
-    pass_file()
+    #pass_file()
     #read_and_write()
+    #write_line(sentence_1)
     #read_file_with_exceptions()
     #loop_with_exceptions()
     #using_finaly()
     #users_line()
-    #infinite_loop()
+    infinite_loop()
     pass
 
 if __name__ == "__main__":
     main()
-'''
