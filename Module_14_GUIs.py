@@ -85,7 +85,7 @@ def interactive_gui_with_buttons():
     
 
 if __name__ =="__main__":
-    #draw_rectangle()
+    draw_rectangle()
     #draw_circle()
     #draw_circle_centered()
-    interactive_gui_with_buttons()
+    #interactive_gui_with_buttons()
