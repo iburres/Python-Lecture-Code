@@ -40,12 +40,7 @@ def read_files_by_line():
     print(file.readline() + line_three)
 
     file.close()
-<<<<<<< HEAD
-     
-    
-=======
     counter = 0
->>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     length = len(line_one)
     print(f'The length of the first line is {length}')
     if "a" in line_one:
@@ -94,20 +89,6 @@ def append_to_file():
 
 def writing_integers_to_files():
     #you will do this one with me
-<<<<<<< HEAD
-    try:
-        outFile = open(r"c:\\users\\iburr\\documents\\write_number.txt", "w" )
-        users_digit =int(input("Enter a number: "))
-    except (ValueError):
-        print("Please enter a digit only, not a letter or special character")
-    #outFile.write(str(users_digit)) 
-    pass  
-  
-
-def reading_int_from_files():
-    outFile = open(r"c:\\users\\iburr\\documents\\write_number.txt", "r" )
-    line_one = outFile.readline()
-=======
     file_path = "/users/burres/desktop/write_number.txt"
     outFile = open(file_path, "w" )
     users_digit = int(input("Enter a number: "))
@@ -122,7 +103,6 @@ def reading_int_from_files():
 def reading_int_from_files():
     outFile = open(r"/users/burres/desktop/write_number.txt", "r" )
     line_one = outFile.readline() 
->>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     
     #users_digit = int(input("Enter a number: "))
     result = int(line_one) * 2
@@ -164,12 +144,7 @@ def read_and_write():
     
 # dealing with exceptions.  We wrap the code in a try block and then catch the error in the except block.  This is a good way to handle files.
 def read_file_with_exceptions():
-<<<<<<< HEAD
-    file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
-    
-=======
     #file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
->>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     try:
         file = open(r'/users/burres/desktop/nurseryRhyme.txt', 'r')
         for line in file:
@@ -232,16 +207,9 @@ def main():
     #skipping_line_space()
     #pass_file()
     #read_and_write()
-<<<<<<< HEAD
-    #write_line(sentence_1)
-    #read_file_with_exceptions()
-    #loop_with_exceptions()
-    #using_finaly()
-=======
     read_file_with_exceptions()
     loop_with_exceptions()
     using_finaly()
->>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     #users_line()
     #infinite_loop()
    

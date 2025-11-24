@@ -170,10 +170,6 @@ def try_to_change_constant():
     print(PI)
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
 if __name__ == "__main__":  
     #x = int(input("Enter a number: "))
     #y = int(input("Enter another number: "))

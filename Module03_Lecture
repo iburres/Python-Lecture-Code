@@ -10,18 +10,11 @@
 #     <statement>    Notice the indentation
 
 
-<<<<<<< HEAD
-user_choice = input("Do you want to continue? (yes/no): ", ) # YES
-    
-#.lower() converts the string to lowercase.  .upper() converts the string to uppercase
-if (user_choice.lower() == "yes"): # .lower() converts the string to lowercase   
-=======
 user_choice = input("Do you want to continue? (yes/no): ", )
 "YeS"
 
 #.lower() converts the string to lowercase.  .upper() converts the string to uppercase
 if (user_choice.upper() == "YES"): # .lower() converts the string to lowercase 
->>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     print("You chose to continue.")
     print("This statement belongs to parent if statement")
     # belongs to paren if statement 

@@ -55,13 +55,8 @@ if choice.lower() == "yes":
     user_choice = int(input("How many times should my loop run? "))
 
     # user-controlled for loop
-<<<<<<< HEAD
-    
-    for i in range(0, user_choice, 1):  #(start, end, increment/decrement)
-=======
     #user_choice = 7
     for i in range(0, user_choice + 1, 1):  #(start, end, increment/decrement)
->>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
         print(f"Welcome to my game. This is loop number: {i}")
 
 for i in range(1, 3):
@@ -112,14 +107,10 @@ print(shots_made)
 #    pass
 
 my_boolean = True
-<<<<<<< HEAD
-while my_boolean:
-=======
 
 
 
 while True:
->>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
     choice = input("Do you want to play a game? ")
     if(choice.lower() == "no"):
         print("Goodbye again")

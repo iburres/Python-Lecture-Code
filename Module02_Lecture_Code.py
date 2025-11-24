@@ -61,10 +61,6 @@ median_age = 24
 big_number = 78939449875345 # don't use commas, or it will think they are multiple values
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> acaac07c44df8eaed46eaca1b6a039abfb21bd6b
 #floating point values (floats)
 average_age = 23.456
 interest_rate = 4.35567 # floating point values have 32-bit representation
